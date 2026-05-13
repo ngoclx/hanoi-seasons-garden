@@ -535,6 +535,35 @@
         </div>
       </div>
     </section>
+
+    <!-- Liên hệ -->
+    <section id="lien-he" class="py-20 lg:py-28 bg-hsg-slate text-ivory scroll-mt-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.06] bg-no-repeat bg-right-bottom bg-contain pointer-events-none" style="background-image:url('/images/pattern-rosette.png')"></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Phòng Kinh Doanh chính thức</p>
+          <h2 class="font-display text-3xl lg:text-5xl mb-4">Đăng ký nhận thông tin</h2>
+          <div class="w-14 h-px bg-sand mx-auto mb-5"></div>
+          <p class="max-w-2xl mx-auto text-sage">Để lại thông tin để nhận bảng giá, mặt bằng và chính sách mới nhất từ PKD LUMIÈRE Hanoi Seasons Garden.</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+          <div class="lg:col-span-2 space-y-6">
+            <div><p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Hotline tư vấn</p><a href="tel:0564928999" class="font-display text-3xl lg:text-4xl text-ivory hover:text-sand transition-colors">0564.928.999</a></div>
+            <div><p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Zalo</p><a href="https://zalo.me/0564928999" rel="noopener" class="text-lg text-ivory hover:text-sand transition-colors">zalo.me/0564928999</a></div>
+            <div><p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Dự án</p><p class="text-base text-sage leading-relaxed">LUMIÈRE Hanoi Seasons Garden<br>233 Nguyễn Trãi, Thanh Xuân, Hà Nội</p></div>
+          </div>
+          <form id="lead-form" class="lg:col-span-3 bg-hsg-slate-dark/60 backdrop-blur rounded-3xl p-6 lg:p-8 border border-sage/20 space-y-4" novalidate>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+            <div><label for="lf-name" class="block text-xs uppercase tracking-wider text-sage mb-2">Họ và tên *</label><input id="lf-name" name="name" type="text" required minlength="2" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Nguyễn Văn A"></div>
+            <div><label for="lf-phone" class="block text-xs uppercase tracking-wider text-sage mb-2">Số điện thoại *</label><input id="lf-phone" name="phone" type="tel" required pattern="0[0-9]{9}" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="09xx xxx xxx"></div>
+            <div><label for="lf-msg" class="block text-xs uppercase tracking-wider text-sage mb-2">Nội dung quan tâm</label><textarea id="lf-msg" name="message" rows="3" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Loại căn quan tâm, ngân sách dự kiến..."></textarea></div>
+            <label class="flex items-start gap-3 text-sm text-sage"><input type="checkbox" name="want_pricelist" value="1" checked class="mt-1 accent-sand"><span>Tôi muốn nhận bảng giá &amp; mặt bằng The Bloom qua email/Zalo.</span></label>
+            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-sand text-hsg-slate-dark text-xs font-semibold tracking-[0.18em] uppercase rounded-sm hover:bg-sand-dark transition-colors">Gửi đăng ký</button>
+            <p id="lf-status" class="text-sm text-center hidden"></p>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
