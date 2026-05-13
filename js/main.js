@@ -37,4 +37,22 @@
   // Footer year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Amenity tabs
+  document.querySelectorAll('.amenity-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.amenity-tab').forEach(t => {
+        const active = t.dataset.tab === target;
+        t.classList.toggle('bg-sand', active);
+        t.classList.toggle('text-hsg-slate-dark', active);
+        t.classList.toggle('text-sage', !active);
+      });
+      document.querySelectorAll('.amenity-panel').forEach(p => {
+        const show = p.dataset.panel === target;
+        p.classList.toggle('hidden', !show);
+        p.classList.toggle('grid', show);
+      });
+    });
+  });
 })();
