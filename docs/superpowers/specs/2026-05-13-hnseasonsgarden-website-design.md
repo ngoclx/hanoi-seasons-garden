@@ -310,7 +310,7 @@ Mirrors langvan's structure, project-specific values:
 
 ## 15. Build sequence (input for the implementation plan)
 
-1. `git init` + `.gitignore` (already done as part of writing this spec).
+1. `git init` + `.gitignore` + initial commit + remote `git@github-ngoclx:ngoclx/hanoi-seasons-garden.git` (done — repo seeded with this spec + README).
 2. Run image pipeline: optimize 19 exterior + 23 interior renders, extract floorplan JPGs, compress PDFs.
 3. Place `SVN-Optima*.otf` + `DFVN-Abygaer-Regular.otf` in `/fonts/`; write `/css/fonts.css`.
 4. Scaffold `index.html` shell (head, header, footer, section anchors, smooth-scroll JS).
