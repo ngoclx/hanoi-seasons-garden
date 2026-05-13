@@ -55,4 +55,46 @@
       });
     });
   });
+
+  // Latest posts on index — uses safe DOM methods, no innerHTML
+  const latestEl = document.getElementById('latest-posts');
+  if (latestEl) {
+    fetch('/blog/posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const top = posts.slice().sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
+        top.forEach(p => {
+          const card = document.createElement('a');
+          card.href = `/blog/${p.slug}`;
+          card.className = 'bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col';
+          const img = document.createElement('img');
+          img.src = `/images/${p.image}`;
+          img.alt = p.title;
+          img.loading = 'lazy';
+          img.className = 'w-full aspect-[16/9] object-cover';
+          card.appendChild(img);
+          const body = document.createElement('div');
+          body.className = 'p-5 flex flex-col flex-1';
+          const meta = document.createElement('p');
+          meta.className = 'text-xs tracking-[0.3em] uppercase text-sand mb-2';
+          meta.textContent = p.category;
+          body.appendChild(meta);
+          const title = document.createElement('h3');
+          title.className = 'font-display text-lg text-hsg-slate mb-2 leading-snug';
+          title.textContent = p.title;
+          body.appendChild(title);
+          const excerpt = document.createElement('p');
+          excerpt.className = 'text-sm text-hsg-slate/70 leading-relaxed flex-1';
+          excerpt.textContent = p.excerpt;
+          body.appendChild(excerpt);
+          const cta = document.createElement('span');
+          cta.className = 'mt-4 text-xs uppercase tracking-wider text-lum-green font-semibold';
+          cta.textContent = 'Đọc tiếp →';
+          body.appendChild(cta);
+          card.appendChild(body);
+          latestEl.appendChild(card);
+        });
+      })
+      .catch(() => { /* posts.json not yet present — silent */ });
+  }
 })();
