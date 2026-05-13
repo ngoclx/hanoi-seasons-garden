@@ -48,4 +48,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/the-bloom-phan-khu-dau-tien-noi-bat.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/4-diem-doc-dao-cua-lumiere-hanoi-seasons-garden.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/tien-ich-dac-quyen-song-thuong-luu-lumiere-hsg.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/tieu-chuan-lumiere-series-tai-hanoi-seasons-garden.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/tieu-chuan-ban-giao-lumiere-hanoi-seasons-garden.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/chon-can-ho-1br-2br-3br-tai-lumiere-hsg.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/tiem-nang-dau-tu-lumiere-hanoi-seasons-garden.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
