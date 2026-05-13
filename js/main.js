@@ -97,4 +97,47 @@
       })
       .catch(() => { /* posts.json not yet present — silent */ });
   }
+
+  // Lead form — uses safe DOM, no innerHTML
+  const leadForm = document.getElementById('lead-form');
+  if (leadForm) {
+    const status = document.getElementById('lf-status');
+    const PHONE_RE = /^0\d{9}$/;
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.classList.remove('hidden', 'text-sand', 'text-red-300');
+      const data = new FormData(leadForm);
+      if (data.get('_gotcha')) return;
+      const name = (data.get('name') || '').toString().trim();
+      const phone = (data.get('phone') || '').toString().trim();
+      if (name.length < 2) {
+        status.classList.add('text-red-300');
+        status.textContent = 'Vui lòng nhập họ tên (ít nhất 2 ký tự).';
+        status.classList.remove('hidden');
+        return;
+      }
+      if (!PHONE_RE.test(phone)) {
+        status.classList.add('text-red-300');
+        status.textContent = 'Số điện thoại không hợp lệ. Định dạng: 0XXXXXXXXX';
+        status.classList.remove('hidden');
+        return;
+      }
+      try {
+        const resp = await fetch('https://formspree.io/f/REPLACE_ME', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' },
+        });
+        if (!resp.ok) throw new Error('submit_failed');
+        status.classList.add('text-sand');
+        status.textContent = 'Cảm ơn — Phòng Kinh Doanh sẽ liên hệ trong thời gian sớm nhất.';
+        status.classList.remove('hidden');
+        leadForm.reset();
+      } catch (err) {
+        status.classList.add('text-red-300');
+        status.textContent = 'Có lỗi khi gửi. Vui lòng gọi 0564.928.999.';
+        status.classList.remove('hidden');
+      }
+    });
+  }
 })();

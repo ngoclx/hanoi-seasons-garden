@@ -15,3 +15,8 @@ Static HTML + Tailwind CSS (Play CDN) + vanilla JS + self-hosted SVN-Optima. No 
 ## Status
 
 Pre-scaffold. Design spec at [`docs/superpowers/specs/2026-05-13-hnseasonsgarden-website-design.md`](docs/superpowers/specs/2026-05-13-hnseasonsgarden-website-design.md).
+
+## Pre-launch checklist
+
+- Replace `https://formspree.io/f/REPLACE_ME` in `js/main.js` (search & replace) with the production Formspree endpoint.
+- Verify lead form submissions land in the Formspree inbox before going live.
