@@ -79,7 +79,7 @@ Posts are static HTML with metadata in `blog/posts.json`.
 
 ### Categories
 
-`Tong quan`, `Phan tich`, `Bang gia`, `Chinh sach`, `Tien do`, `Phap ly`, `Tien ich` — used as filter keys (no diacritics).
+`Tổng quan`, `Phân tích`, `Bảng giá`, `Chính sách`, `Tiến độ`, `Pháp lý`, `Tiện ích`, `Sản phẩm` — full Vietnamese with diacritics, shown verbatim on card eyebrows and breadcrumbs.
 
 ## Content sources
 

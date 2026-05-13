@@ -140,4 +140,79 @@
       }
     });
   }
+
+  // Amenity lightbox — open any tiện ích figure in full-screen, navigate prev/next within the active tab
+  const aLb = document.getElementById('amenity-lightbox');
+  if (aLb) {
+    const aImg = document.getElementById('amenity-lb-img');
+    const aCap = document.getElementById('amenity-lb-caption');
+    const aCounter = document.getElementById('amenity-lb-counter');
+    const aClose = document.getElementById('amenity-lb-close');
+    const aPrev = document.getElementById('amenity-lb-prev');
+    const aNext = document.getElementById('amenity-lb-next');
+
+    let panelImages = [];
+    let currentIdx = 0;
+
+    function loadCurrent() {
+      if (!panelImages.length) return;
+      const img = panelImages[currentIdx];
+      aImg.src = img.src;
+      aImg.alt = img.alt;
+      const cap = img.parentElement.querySelector('figcaption');
+      aCap.textContent = cap ? cap.textContent : img.alt;
+      aCounter.textContent = (currentIdx + 1) + ' / ' + panelImages.length;
+    }
+
+    function openAt(panelEl, startImg) {
+      panelImages = Array.from(panelEl.querySelectorAll('figure img'));
+      currentIdx = panelImages.indexOf(startImg);
+      if (currentIdx < 0) currentIdx = 0;
+      loadCurrent();
+      aLb.classList.remove('hidden');
+      aLb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+      aLb.classList.add('hidden');
+      aLb.classList.remove('flex');
+      aImg.src = '';
+      panelImages = [];
+      document.body.style.overflow = '';
+    }
+
+    function nextImg() {
+      if (!panelImages.length) return;
+      currentIdx = (currentIdx + 1) % panelImages.length;
+      loadCurrent();
+    }
+
+    function prevImg() {
+      if (!panelImages.length) return;
+      currentIdx = (currentIdx - 1 + panelImages.length) % panelImages.length;
+      loadCurrent();
+    }
+
+    document.querySelectorAll('.amenity-panel figure').forEach(fig => {
+      fig.classList.add('cursor-zoom-in');
+      fig.addEventListener('click', () => {
+        const panel = fig.closest('.amenity-panel');
+        const img = fig.querySelector('img');
+        if (!panel || !img) return;
+        openAt(panel, img);
+      });
+    });
+
+    aClose.addEventListener('click', closeLb);
+    aPrev.addEventListener('click', (e) => { e.stopPropagation(); prevImg(); });
+    aNext.addEventListener('click', (e) => { e.stopPropagation(); nextImg(); });
+    aLb.addEventListener('click', (e) => { if (e.target === aLb) closeLb(); });
+    document.addEventListener('keydown', (e) => {
+      if (aLb.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLb();
+      else if (e.key === 'ArrowRight') nextImg();
+      else if (e.key === 'ArrowLeft') prevImg();
+    });
+  }
 })();

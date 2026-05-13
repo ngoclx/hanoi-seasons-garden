@@ -1,101 +1,153 @@
 [
   {
-    "slug": "tong-quan-lumiere-hanoi-seasons-garden.html",
-    "title": "Tổng quan LUMIÈRE Hanoi Seasons Garden — Tổ hợp 10 tòa tháp Masterise giữa lòng Thanh Xuân",
-    "excerpt": "Dự án 8,28 ha, 10 tòa tháp 36–46 tầng tại khu đất Cao–Xà–Lá lịch sử (233 Nguyễn Trãi), do Masterise Homes phát triển. Phân khu The Bloom mở bán Tòa L1 và L2.",
+    "slug": "tiem-nang-dau-tu-lumiere-hanoi-seasons-garden.html",
+    "title": "Tiềm năng đầu tư LUMIÈRE Hanoi Seasons Garden — Phân tích ROI và cơ hội sinh lời",
+    "excerpt": "Phân tích tiềm năng đầu tư — tỷ suất cho thuê 4–6%/năm, kịch bản tăng giá theo lộ trình bàn giao Q2/2029, đòn bẩy vay 70% lãi 0% và những rủi ro cần cân nhắc.",
     "date": "2026-05-13",
-    "category": "Tong quan",
-    "tags": ["Lumière HSG", "Masterise", "Tổng quan", "The Bloom"],
-    "image": "hero-aerial.jpg"
-  },
-  {
-    "slug": "vi-tri-lumiere-hanoi-seasons-garden.html",
-    "title": "Vị trí LUMIÈRE Hanoi Seasons Garden — 3 phút đi bộ tới Metro Cát Linh–Hà Đông",
-    "excerpt": "Tọa lạc tại 233 Nguyễn Trãi — trục huyết mạch phía Tây Hà Nội, cận kề Ngã Tư Sở, Royal City, kết nối Vành đai 2.5 và Vành đai 3.",
-    "date": "2026-05-13",
-    "category": "Phan tich",
-    "tags": ["Vị trí", "233 Nguyễn Trãi", "Metro Cát Linh"],
-    "image": "amenity-entrance-gate.jpg"
-  },
-  {
-    "slug": "bang-gia-lumiere-hanoi-seasons-garden-2026.html",
-    "title": "Bảng giá LUMIÈRE Hanoi Seasons Garden 2026 — Phân khu The Bloom",
-    "excerpt": "Giá tham khảo 128 – 174 triệu/m², các loại căn từ Studio đến Penthouse Duplex, ngưỡng giá căn từ ~4 đến 48 tỷ. Hỗ trợ vay 70% lãi suất 0% đến Q2/2029.",
-    "date": "2026-05-13",
-    "category": "Bang gia",
-    "tags": ["Bảng giá", "The Bloom", "2026"],
-    "image": "thebloom-l1-facade.jpg"
-  },
-  {
-    "slug": "chinh-sach-thanh-toan-lumiere-hsg-2026.html",
-    "title": "Chính sách thanh toán LUMIÈRE Hanoi Seasons Garden 2026",
-    "excerpt": "Ba phương án linh hoạt: chiết khấu 7% thanh toán sớm, 12 đợt trong ~3 năm, hoặc vay ngân hàng 70% lãi suất 0% đến bàn giao Q2/2029. Cộng thêm Early Bird 1% + 12 tháng phí quản lý.",
-    "date": "2026-05-13",
-    "category": "Chinh sach",
-    "tags": ["Chính sách", "Thanh toán", "Vay 70%"],
-    "image": "amenity-clubhouse-pool.jpg"
-  },
-  {
-    "slug": "the-bloom-phan-khu-dau-tien-noi-bat.html",
-    "title": "The Bloom — Phân khu mở bán đầu tiên của LUMIÈRE Hanoi Seasons Garden",
-    "excerpt": "The Bloom gồm Tòa L1 và L2 — phân khu mở bán đầu tiên định hình ngôn ngữ thiết kế tinh khôi và tiêu chuẩn vận hành Masterise Hospitality cho toàn tổ hợp.",
-    "date": "2026-05-13",
-    "category": "Tong quan",
-    "tags": ["The Bloom", "Tòa L1", "Tòa L2", "Lumière HSG"],
-    "image": "thebloom-l1-facade.jpg"
+    "category": "Phân tích",
+    "tags": [
+      "Đầu tư",
+      "ROI",
+      "Cho thuê",
+      "Phân tích"
+    ],
+    "image": "overview-masterplan.jpg"
   },
   {
     "slug": "4-diem-doc-dao-cua-lumiere-hanoi-seasons-garden.html",
     "title": "4 điểm độc đáo của LUMIÈRE Hanoi Seasons Garden tạo lợi thế đắt giá",
     "excerpt": "Bốn lợi thế cạnh tranh hiếm có: quỹ đất 8,28 ha nội đô, mật độ 28,8%, hệ tiện ích Masterise Hospitality và vị trí huyết mạch 233 Nguyễn Trãi.",
-    "date": "2026-05-13",
-    "category": "Phan tich",
-    "tags": ["Phân tích", "Lợi thế", "Lumière HSG", "Đầu tư"],
+    "date": "2026-05-12",
+    "category": "Phân tích",
+    "tags": [
+      "Phân tích",
+      "Lợi thế",
+      "Lumière HSG",
+      "Đầu tư"
+    ],
     "image": "overview-architecture.jpg"
   },
   {
     "slug": "tien-ich-dac-quyen-song-thuong-luu-lumiere-hsg.html",
     "title": "Tiện ích LUMIÈRE Hanoi Seasons Garden — Đặc quyền sống thượng lưu",
     "excerpt": "Hệ tiện ích 3 nhóm — clubhouse Masterise Hospitality, không gian ngoài trời rộng lớn và hệ sinh thái đô thị tích hợp (trường, y tế, thương mại).",
-    "date": "2026-05-13",
-    "category": "Tien ich",
-    "tags": ["Tiện ích", "Masterise Hospitality", "Clubhouse"],
+    "date": "2026-05-10",
+    "category": "Tiện ích",
+    "tags": [
+      "Tiện ích",
+      "Masterise Hospitality",
+      "Clubhouse"
+    ],
     "image": "amenity-clubhouse-pool.jpg"
-  },
-  {
-    "slug": "tieu-chuan-lumiere-series-tai-hanoi-seasons-garden.html",
-    "title": "Tiêu chuẩn LUMIÈRE Series — Điểm cộng đắt giá tại Hanoi Seasons Garden",
-    "excerpt": "Năm trụ cột tiêu chuẩn LUMIÈRE Series của Masterise — ánh sáng tinh khôi, vật liệu thiên nhiên, không gian mở, walk-in closet và home office — được áp dụng đầy đủ tại Hanoi Seasons Garden.",
-    "date": "2026-05-13",
-    "category": "Tien ich",
-    "tags": ["Lumière Series", "Masterise", "Tiêu chuẩn"],
-    "image": "interior-2br-living-1.jpg"
-  },
-  {
-    "slug": "tieu-chuan-ban-giao-lumiere-hanoi-seasons-garden.html",
-    "title": "Tiêu chuẩn bàn giao LUMIÈRE Hanoi Seasons Garden — Chi tiết từng hạng mục",
-    "excerpt": "Chi tiết tiêu chuẩn bàn giao Q2/2029 — sàn gỗ herringbone, bếp đá marble với thiết bị Bosch/Siemens, phòng tắm Hansgrohe, smart-home cơ bản và bảo hành Masterise.",
-    "date": "2026-05-13",
-    "category": "San pham",
-    "tags": ["Bàn giao", "Tiêu chuẩn", "Q2/2029"],
-    "image": "interior-4br-living-op1.jpg"
   },
   {
     "slug": "chon-can-ho-1br-2br-3br-tai-lumiere-hsg.html",
     "title": "Nên chọn căn hộ 1BR, 2BR hay 3BR tại LUMIÈRE Hanoi Seasons Garden?",
     "excerpt": "Hướng dẫn chọn 11 loại căn từ Studio đến Penthouse Duplex theo nhu cầu ở thực, đầu tư cho thuê hay nâng tầm tài sản — kèm bảng so sánh nhanh.",
-    "date": "2026-05-13",
-    "category": "San pham",
-    "tags": ["Loại căn", "Studio", "1BR", "2BR", "3BR", "4BR", "Hướng dẫn"],
+    "date": "2026-05-08",
+    "category": "Sản phẩm",
+    "tags": [
+      "Loại căn",
+      "Studio",
+      "1BR",
+      "2BR",
+      "3BR",
+      "4BR",
+      "Hướng dẫn"
+    ],
     "image": "interior-2br-master.jpg"
   },
   {
-    "slug": "tiem-nang-dau-tu-lumiere-hanoi-seasons-garden.html",
-    "title": "Tiềm năng đầu tư LUMIÈRE Hanoi Seasons Garden — Phân tích ROI và cơ hội sinh lời",
-    "excerpt": "Phân tích tiềm năng đầu tư — tỷ suất cho thuê 4–6%/năm, kịch bản tăng giá theo lộ trình bàn giao Q2/2029, đòn bẩy vay 70% lãi 0% và những rủi ro cần cân nhắc.",
-    "date": "2026-05-13",
-    "category": "Phan tich",
-    "tags": ["Đầu tư", "ROI", "Cho thuê", "Phân tích"],
-    "image": "overview-masterplan.jpg"
+    "slug": "tieu-chuan-ban-giao-lumiere-hanoi-seasons-garden.html",
+    "title": "Tiêu chuẩn bàn giao LUMIÈRE Hanoi Seasons Garden — Chi tiết từng hạng mục",
+    "excerpt": "Chi tiết tiêu chuẩn bàn giao Q2/2029 — sàn gỗ herringbone, bếp đá marble với thiết bị Bosch/Siemens, phòng tắm Hansgrohe, smart-home cơ bản và bảo hành Masterise.",
+    "date": "2026-05-06",
+    "category": "Sản phẩm",
+    "tags": [
+      "Bàn giao",
+      "Tiêu chuẩn",
+      "Q2/2029"
+    ],
+    "image": "interior-4br-living-op1.jpg"
+  },
+  {
+    "slug": "tieu-chuan-lumiere-series-tai-hanoi-seasons-garden.html",
+    "title": "Tiêu chuẩn LUMIÈRE Series — Điểm cộng đắt giá tại Hanoi Seasons Garden",
+    "excerpt": "Năm trụ cột tiêu chuẩn LUMIÈRE Series của Masterise — ánh sáng tinh khôi, vật liệu thiên nhiên, không gian mở, walk-in closet và home office — được áp dụng đầy đủ tại Hanoi Seasons Garden.",
+    "date": "2026-05-04",
+    "category": "Tiện ích",
+    "tags": [
+      "Lumière Series",
+      "Masterise",
+      "Tiêu chuẩn"
+    ],
+    "image": "interior-2br-living-1.jpg"
+  },
+  {
+    "slug": "chinh-sach-thanh-toan-lumiere-hsg-2026.html",
+    "title": "Chính sách thanh toán LUMIÈRE Hanoi Seasons Garden 2026",
+    "excerpt": "Ba phương án linh hoạt: chiết khấu 7% thanh toán sớm, 12 đợt trong ~3 năm, hoặc vay ngân hàng 70% lãi suất 0% đến bàn giao Q2/2029. Cộng thêm Early Bird 1% + 12 tháng phí quản lý.",
+    "date": "2026-05-02",
+    "category": "Chính sách",
+    "tags": [
+      "Chính sách",
+      "Thanh toán",
+      "Vay 70%"
+    ],
+    "image": "amenity-clubhouse-pool.jpg"
+  },
+  {
+    "slug": "bang-gia-lumiere-hanoi-seasons-garden-2026.html",
+    "title": "Bảng giá LUMIÈRE Hanoi Seasons Garden 2026 — Phân khu The Bloom",
+    "excerpt": "Giá tham khảo 128 – 174 triệu/m², các loại căn từ Studio đến Penthouse Duplex, ngưỡng giá căn từ ~4 đến 48 tỷ. Hỗ trợ vay 70% lãi suất 0% đến Q2/2029.",
+    "date": "2026-04-30",
+    "category": "Bảng giá",
+    "tags": [
+      "Bảng giá",
+      "The Bloom",
+      "2026"
+    ],
+    "image": "thebloom-l1-facade.jpg"
+  },
+  {
+    "slug": "the-bloom-phan-khu-dau-tien-noi-bat.html",
+    "title": "The Bloom — Phân khu mở bán đầu tiên của LUMIÈRE Hanoi Seasons Garden",
+    "excerpt": "The Bloom gồm Tòa L1 và L2 — phân khu mở bán đầu tiên định hình ngôn ngữ thiết kế tinh khôi và tiêu chuẩn vận hành Masterise Hospitality cho toàn tổ hợp.",
+    "date": "2026-04-27",
+    "category": "Tổng quan",
+    "tags": [
+      "The Bloom",
+      "Tòa L1",
+      "Tòa L2",
+      "Lumière HSG"
+    ],
+    "image": "thebloom-l1-facade.jpg"
+  },
+  {
+    "slug": "vi-tri-lumiere-hanoi-seasons-garden.html",
+    "title": "Vị trí LUMIÈRE Hanoi Seasons Garden — 3 phút đi bộ tới Metro Cát Linh–Hà Đông",
+    "excerpt": "Tọa lạc tại 233 Nguyễn Trãi — trục huyết mạch phía Tây Hà Nội, cận kề Ngã Tư Sở, Royal City, kết nối Vành đai 2.5 và Vành đai 3.",
+    "date": "2026-04-24",
+    "category": "Phân tích",
+    "tags": [
+      "Vị trí",
+      "233 Nguyễn Trãi",
+      "Metro Cát Linh"
+    ],
+    "image": "amenity-entrance-gate.jpg"
+  },
+  {
+    "slug": "tong-quan-lumiere-hanoi-seasons-garden.html",
+    "title": "Tổng quan LUMIÈRE Hanoi Seasons Garden — Tổ hợp 10 tòa tháp Masterise giữa lòng Thanh Xuân",
+    "excerpt": "Dự án 8,28 ha, 10 tòa tháp 36–46 tầng tại khu đất Cao–Xà–Lá lịch sử (233 Nguyễn Trãi), do Masterise Homes phát triển. Phân khu The Bloom mở bán Tòa L1 và L2.",
+    "date": "2026-04-20",
+    "category": "Tổng quan",
+    "tags": [
+      "Lumière HSG",
+      "Masterise",
+      "Tổng quan",
+      "The Bloom"
+    ],
+    "image": "hero-aerial.jpg"
   }
 ]

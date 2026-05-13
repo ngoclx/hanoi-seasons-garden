@@ -1,0 +1,173 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "LUMIÈRE Hanoi Seasons Garden" [ref=e5] [cursor=pointer]:
+        - /url: "#"
+        - img "LUMIÈRE Hanoi Seasons Garden" [ref=e6]
+      - navigation [ref=e7]:
+        - link "Vị Trí" [ref=e8] [cursor=pointer]:
+          - /url: "#vi-tri"
+        - link "Tổng Quan" [ref=e9] [cursor=pointer]:
+          - /url: "#tong-quan"
+        - link "The Bloom" [ref=e10] [cursor=pointer]:
+          - /url: "#the-bloom"
+        - link "Tiện Ích" [ref=e11] [cursor=pointer]:
+          - /url: "#tien-ich"
+        - link "Bảng Giá" [ref=e12] [cursor=pointer]:
+          - /url: "#bang-gia"
+        - link "Chính Sách" [ref=e13] [cursor=pointer]:
+          - /url: "#chinh-sach"
+        - link "Tin Tức" [ref=e14] [cursor=pointer]:
+          - /url: /blog/
+        - link "Liên Hệ" [ref=e15] [cursor=pointer]:
+          - /url: "#lien-he"
+      - link "0564.928.999" [ref=e17] [cursor=pointer]:
+        - /url: tel:0564928999
+        - img [ref=e18]
+        - text: 0564.928.999
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - img "Phối cảnh facade Tòa L1 — The Bloom" [ref=e24]
+      - generic [ref=e26]:
+        - navigation [ref=e27]:
+          - link "PKD HSG" [ref=e28] [cursor=pointer]:
+            - /url: /
+          - text: ·
+          - link "Phân khu The Bloom" [ref=e29] [cursor=pointer]:
+            - /url: /#the-bloom
+          - text: · Tòa L1
+        - paragraph [ref=e30]: PHÂN KHU THE BLOOM
+        - heading "Tòa L1" [level=1] [ref=e31]
+        - paragraph [ref=e32]: Tòa tháp mở đầu phân khu The Bloom — kiến tạo ngôn ngữ thiết kế "tinh khôi" cho LUMIÈRE Hanoi Seasons Garden.
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - paragraph [ref=e36]: 36–46
+        - paragraph [ref=e37]: tầng (xác nhận với CĐT)
+      - generic [ref=e38]:
+        - paragraph [ref=e39]: "10"
+        - paragraph [ref=e40]: loại căn
+      - generic [ref=e41]:
+        - paragraph [ref=e42]: 3 hầm
+        - paragraph [ref=e43]: đỗ xe
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Q2/2029
+        - paragraph [ref=e46]: bàn giao
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - paragraph [ref=e50]: Layout điển hình
+        - heading "Mặt bằng từng loại căn" [level=2] [ref=e51]
+      - tablist [ref=e53]:
+        - button "Studio" [ref=e54] [cursor=pointer]
+        - button "1BR" [ref=e55] [cursor=pointer]
+        - button "1BR+1" [ref=e56] [cursor=pointer]
+        - button "2BR" [ref=e57] [cursor=pointer]
+        - button "2BR+1" [ref=e58] [cursor=pointer]
+        - button "3BR" [ref=e59] [cursor=pointer]
+        - button "3BR+1" [ref=e60] [cursor=pointer]
+        - button "4BR" [ref=e61] [cursor=pointer]
+        - button "Duplex" [ref=e62] [cursor=pointer]
+        - button "Penthouse" [ref=e63] [cursor=pointer]
+      - figure "Studio · ~30 – 38 m²" [ref=e65]:
+        - img "Mặt bằng điển hình Studio Tòa L1" [ref=e66]
+        - generic [ref=e67]: Studio · ~30 – 38 m²
+      - generic [ref=e68]:
+        - paragraph [ref=e69]: Để xem mặt bằng đầy đủ tất cả các tầng/căn của Tòa L1, vui lòng để lại thông tin — file PDF sẽ được gửi qua email/Zalo.
+        - link "Tải mặt bằng đầy đủ (PDF)" [ref=e70] [cursor=pointer]:
+          - /url: /docs/floorplans-l1-the-bloom.pdf
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: Bộ sưu tập phối cảnh
+        - heading "Phối cảnh nội thất" [level=2] [ref=e75]
+      - generic [ref=e77]:
+        - figure [ref=e78]:
+          - img "2BR Living + Kitchen" [ref=e79]
+        - figure [ref=e80]:
+          - img "2BR Master bedroom" [ref=e81]
+        - figure [ref=e82]:
+          - img "4BR Living + Kitchen — Option 1" [ref=e83]
+        - figure [ref=e84]:
+          - img "4BR Master bedroom" [ref=e85]
+        - figure [ref=e86]:
+          - img "Sảnh đón chính Tòa L1" [ref=e87]
+        - figure [ref=e88]:
+          - img "Business lounge Tòa L1" [ref=e89]
+        - figure [ref=e90]:
+          - img "Thư viện Tòa L1" [ref=e91]
+        - figure [ref=e92]:
+          - img "Hành lang căn hộ" [ref=e93]
+        - figure [ref=e94]:
+          - img "Sảnh thang máy" [ref=e95]
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - paragraph [ref=e99]: Phòng Kinh Doanh chính thức
+        - heading "Đăng ký nhận thông tin" [level=2] [ref=e100]
+        - paragraph [ref=e102]: Để lại thông tin để nhận bảng giá, mặt bằng và chính sách mới nhất từ PKD LUMIÈRE Hanoi Seasons Garden.
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - paragraph [ref=e106]: Hotline tư vấn
+            - link "0564.928.999" [ref=e107] [cursor=pointer]:
+              - /url: tel:0564928999
+          - generic [ref=e108]:
+            - paragraph [ref=e109]: Zalo
+            - link "zalo.me/0564928999" [ref=e110] [cursor=pointer]:
+              - /url: https://zalo.me/0564928999
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: Dự án
+            - paragraph [ref=e113]:
+              - text: LUMIÈRE Hanoi Seasons Garden
+              - text: 233 Nguyễn Trãi, Thanh Xuân, Hà Nội
+        - generic [ref=e114]:
+          - textbox [ref=e115]
+          - generic [ref=e116]:
+            - generic [ref=e117]: Họ và tên *
+            - textbox "Họ và tên *" [ref=e118]:
+              - /placeholder: Nguyễn Văn A
+          - generic [ref=e119]:
+            - generic [ref=e120]: Số điện thoại *
+            - textbox "Số điện thoại *" [ref=e121]:
+              - /placeholder: 09xx xxx xxx
+          - generic [ref=e122]:
+            - generic [ref=e123]: Nội dung quan tâm
+            - textbox "Nội dung quan tâm" [ref=e124]:
+              - /placeholder: Loại căn quan tâm, ngân sách dự kiến...
+          - generic [ref=e125]:
+            - checkbox "Tôi muốn nhận bảng giá & mặt bằng The Bloom qua email/Zalo." [checked] [ref=e126]
+            - generic [ref=e127]: Tôi muốn nhận bảng giá & mặt bằng The Bloom qua email/Zalo.
+          - button "Gửi đăng ký" [ref=e128] [cursor=pointer]
+  - contentinfo [ref=e129]:
+    - generic [ref=e130]:
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - img "LUMIÈRE Hanoi Seasons Garden" [ref=e133]
+          - paragraph [ref=e134]: Phòng Kinh Doanh — Phân phối chính thức dự án LUMIÈRE Hanoi Seasons Garden tại 233 Nguyễn Trãi, Hà Nội.
+        - generic [ref=e135]:
+          - heading "Liên hệ" [level=4] [ref=e136]
+          - list [ref=e137]:
+            - listitem [ref=e138]:
+              - 'link "Hotline: 0564.928.999" [ref=e139] [cursor=pointer]':
+                - /url: tel:0564928999
+            - listitem [ref=e140]:
+              - 'link "Zalo: zalo.me/0564928999" [ref=e141] [cursor=pointer]':
+                - /url: https://zalo.me/0564928999
+        - generic [ref=e142]:
+          - heading "Liên kết" [level=4] [ref=e143]
+          - list [ref=e144]:
+            - listitem [ref=e145]:
+              - link "Tổng quan dự án" [ref=e146] [cursor=pointer]:
+                - /url: "#tong-quan"
+            - listitem [ref=e147]:
+              - link "Phân khu The Bloom" [ref=e148] [cursor=pointer]:
+                - /url: "#the-bloom"
+            - listitem [ref=e149]:
+              - link "Tòa L1" [ref=e150] [cursor=pointer]:
+                - /url: /toa-l1.html
+            - listitem [ref=e151]:
+              - link "Tòa L2" [ref=e152] [cursor=pointer]:
+                - /url: /toa-l2.html
+            - listitem [ref=e153]:
+              - link "Tin tức" [ref=e154] [cursor=pointer]:
+                - /url: /blog/
+      - generic [ref=e155]:
+        - paragraph [ref=e156]: Website cung cấp bởi Phòng Kinh Doanh dự án LUMIÈRE Hanoi Seasons Garden — không phải trang thông tin chính thức từ Chủ đầu tư Masterise Homes. Thông tin có thể thay đổi theo chính sách của Chủ đầu tư.
+        - paragraph [ref=e157]: © 2026 PKD Hanoi Seasons Garden. Phân phối chính thức.
