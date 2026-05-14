@@ -142,13 +142,16 @@
     <section id="hero" class="relative min-h-[60vh] flex items-end overflow-hidden">
       <div class="absolute inset-0">
         <img src="/images/thebloom-l2-facade.jpg" alt="Phối cảnh facade Tòa L2 — The Bloom" class="w-full h-full object-cover" loading="eager">
-        <div class="absolute inset-0 bg-gradient-to-b from-hsg-slate/30 via-transparent to-hsg-slate-dark/80"></div>
+        <!-- Top dark band so the sticky header sits on a darker strip -->
+        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-hsg-slate-dark/65 to-transparent"></div>
+        <!-- Bottom dark fade so the hero copy meets WCAG-AA contrast on bright skies -->
+        <div class="absolute inset-x-0 bottom-0 h-[90%] bg-gradient-to-t from-hsg-slate-dark via-hsg-slate-dark/80 to-transparent"></div>
       </div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 w-full text-ivory">
-        <nav class="text-xs tracking-wider uppercase text-sage mb-4"><a href="/" class="hover:text-sand">PKD HSG</a> · <a href="/#the-bloom" class="hover:text-sand">Phân khu The Bloom</a> · <span class="text-ivory">Tòa L2</span></nav>
-        <p class="text-xs tracking-[0.4em] text-sand mb-3">PHÂN KHU THE BLOOM</p>
-        <h1 class="font-display text-5xl lg:text-7xl mb-3">Tòa L2</h1>
-        <p class="text-base lg:text-lg text-sage max-w-2xl">Tòa tháp song hành cùng L1 trong phân khu The Bloom — tối ưu ánh sáng tự nhiên và tầm nhìn nội khu.</p>
+        <nav class="text-xs tracking-wider uppercase text-ivory/85 mb-4 [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]"><a href="/" class="hover:text-sand">PKD HSG</a> · <a href="/#the-bloom" class="hover:text-sand">Phân khu The Bloom</a> · <span class="text-ivory font-semibold">Tòa L2</span></nav>
+        <p class="inline-block text-xs font-semibold tracking-[0.35em] text-ivory bg-hsg-slate-dark/55 backdrop-blur-sm px-4 py-1.5 rounded-full mb-4 [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">PHÂN KHU THE BLOOM</p>
+        <h1 class="font-display text-5xl lg:text-7xl mb-3 [text-shadow:0_2px_10px_rgba(0,0,0,0.55)]">Tòa L2</h1>
+        <p class="text-base lg:text-lg text-ivory/95 max-w-2xl [text-shadow:0_1px_3px_rgba(0,0,0,0.55)]">Tòa tháp song hành cùng L1 trong phân khu The Bloom — tối ưu ánh sáng tự nhiên và tầm nhìn nội khu.</p>
       </div>
     </section>
 
