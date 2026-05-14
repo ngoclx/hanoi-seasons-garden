@@ -56,16 +56,46 @@
     });
   });
 
-  // Payment-schedule tabs (Tiến độ thanh toán)
-  document.querySelectorAll('.payment-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
-      document.querySelectorAll('.payment-tab').forEach(t => {
-        const active = t.dataset.tab === target;
-        t.classList.toggle('bg-sand', active);
-        t.classList.toggle('text-hsg-slate-dark', active);
-        t.classList.toggle('text-hsg-slate', !active);
+  // Policy cards — clicking a card swaps the payment-schedule panel below
+  document.querySelectorAll('.policy-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const target = card.dataset.pay;
+
+      document.querySelectorAll('.policy-card').forEach(c => {
+        const active = c.dataset.pay === target;
+        c.setAttribute('aria-pressed', active ? 'true' : 'false');
+        c.classList.toggle('is-active', active);
+        // Swap the card body palette so the active one becomes green, inactive ones revert to white
+        c.classList.toggle('bg-lum-green', active);
+        c.classList.toggle('text-ivory', active);
+        c.classList.toggle('border-transparent', active);
+        c.classList.toggle('bg-white', !active);
+        c.classList.toggle('text-hsg-slate', !active);
+        c.classList.toggle('border-warm-gray', !active);
+
+        const title = c.querySelector('.policy-title');
+        if (title) {
+          title.classList.toggle('text-hsg-slate', !active);
+        }
+        const hero = c.querySelector('.policy-hero');
+        if (hero) {
+          hero.classList.toggle('text-lum-green', !active);
+          // The small "label" span inside the hero number switches its tone
+          const sub = hero.querySelector('span');
+          if (sub) {
+            sub.classList.toggle('text-sage', active);
+            sub.classList.toggle('text-hsg-slate/60', !active);
+          }
+        }
+        const list = c.querySelector('.policy-list');
+        if (list) {
+          list.classList.toggle('text-sage', active);
+          list.classList.toggle('text-hsg-slate/80', !active);
+        }
+        const badge = c.querySelector('.policy-badge');
+        if (badge) badge.classList.toggle('hidden', !active);
       });
+
       document.querySelectorAll('.payment-panel').forEach(p => {
         p.classList.toggle('hidden', p.dataset.panel !== target);
       });

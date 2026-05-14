@@ -460,26 +460,53 @@
       </div>
     </section>
 
-    <!-- Tiến độ thanh toán -->
-    <section id="tien-do-thanh-toan" class="py-20 lg:py-28 bg-ivory scroll-mt-20">
+    <!-- Chính sách thanh toán (cards = tabs that reveal the payment schedule) -->
+    <section id="chinh-sach" class="py-20 lg:py-28 bg-ivory scroll-mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Lịch thanh toán</p>
-          <h2 class="font-display text-3xl lg:text-5xl text-hsg-slate mb-4">Tiến độ thanh toán</h2>
+        <div class="text-center mb-12">
+          <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">3 phương án linh hoạt</p>
+          <h2 class="font-display text-3xl lg:text-5xl text-hsg-slate mb-4">Chính sách thanh toán</h2>
           <div class="w-14 h-px bg-sand mx-auto mb-5"></div>
-          <p class="max-w-2xl mx-auto text-hsg-slate/80">Chi tiết lịch đóng tiền cho từng phương án mua căn hộ tại phân khu The Bloom.</p>
+          <p class="max-w-2xl mx-auto text-hsg-slate/80">Chọn một phương án để xem chi tiết lịch đóng tiền.</p>
         </div>
 
-        <div class="flex justify-center mb-8">
-          <div class="inline-flex gap-1 bg-warm-gray p-1 rounded-full" role="tablist">
-            <button class="payment-tab px-5 py-2 text-xs uppercase tracking-wider rounded-full transition-colors bg-sand text-hsg-slate-dark" data-tab="standard">Tiến độ chuẩn</button>
-            <button class="payment-tab px-5 py-2 text-xs uppercase tracking-wider rounded-full transition-colors text-hsg-slate hover:text-lum-green" data-tab="early">Thanh toán sớm</button>
-            <button class="payment-tab px-5 py-2 text-xs uppercase tracking-wider rounded-full transition-colors text-hsg-slate hover:text-lum-green" data-tab="loan">Vay vốn 70%</button>
-          </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+          <button type="button" class="policy-card group is-active bg-lum-green text-ivory rounded-3xl p-8 flex flex-col text-left border-2 border-transparent transition-shadow hover:shadow-lg" data-pay="early" aria-pressed="true">
+            <span class="flex items-center justify-between mb-3"><span class="text-xs tracking-[0.3em] text-sand uppercase">Phương án 01</span><span class="policy-badge text-[10px] uppercase tracking-[0.18em] font-semibold bg-sand text-hsg-slate-dark px-2 py-1 rounded-full">Đang xem</span></span>
+            <h3 class="policy-title font-display text-2xl mb-4">Thanh toán sớm</h3>
+            <p class="policy-hero font-display text-5xl mb-4">7%<span class="font-sans text-base text-sage"> chiết khấu</span></p>
+            <ul class="policy-list text-sm space-y-2 text-sage leading-relaxed mt-2">
+              <li>Chiết khấu lên đến 7% giá trị căn hộ.</li>
+              <li>Thanh toán <strong class="text-ivory">70% giá bán</strong> trong 30 ngày sau ký HĐMB.</li>
+              <li>Phù hợp khách hàng có dòng tiền sẵn sàng.</li>
+            </ul>
+          </button>
+
+          <button type="button" class="policy-card group bg-white text-hsg-slate rounded-3xl p-8 flex flex-col text-left border-2 border-warm-gray transition-shadow hover:shadow-lg" data-pay="standard" aria-pressed="false">
+            <span class="flex items-center justify-between mb-3"><span class="text-xs tracking-[0.3em] text-sand uppercase">Phương án 02</span><span class="policy-badge hidden text-[10px] uppercase tracking-[0.18em] font-semibold bg-sand text-hsg-slate-dark px-2 py-1 rounded-full">Đang xem</span></span>
+            <h3 class="policy-title font-display text-2xl text-hsg-slate mb-4">Thanh toán theo đợt</h3>
+            <p class="policy-hero font-display text-5xl text-lum-green mb-4">12 đợt<span class="font-sans text-base text-hsg-slate/60"> trong ~3 năm</span></p>
+            <ul class="policy-list text-sm space-y-2 text-hsg-slate/80 leading-relaxed mt-2">
+              <li>12 đợt trải đều khoảng 3 năm kể từ ký HĐMB.</li>
+              <li>Linh hoạt theo tiến độ xây dựng &amp; bàn giao.</li>
+              <li>Phù hợp dòng tiền dần tích lũy.</li>
+            </ul>
+          </button>
+
+          <button type="button" class="policy-card group bg-white text-hsg-slate rounded-3xl p-8 flex flex-col text-left border-2 border-warm-gray transition-shadow hover:shadow-lg" data-pay="loan" aria-pressed="false">
+            <span class="flex items-center justify-between mb-3"><span class="text-xs tracking-[0.3em] text-sand uppercase">Phương án 03</span><span class="policy-badge hidden text-[10px] uppercase tracking-[0.18em] font-semibold bg-sand text-hsg-slate-dark px-2 py-1 rounded-full">Đang xem</span></span>
+            <h3 class="policy-title font-display text-2xl text-hsg-slate mb-4">Vay ngân hàng 70%</h3>
+            <p class="policy-hero font-display text-5xl text-lum-green mb-4">0%<span class="font-sans text-base text-hsg-slate/60"> đến Q2/2029</span></p>
+            <ul class="policy-list text-sm space-y-2 text-hsg-slate/80 leading-relaxed mt-2">
+              <li>Hỗ trợ vay đến 70% giá trị căn hộ.</li>
+              <li><strong>Lãi suất 0%</strong> tới thời điểm bàn giao Q2/2029.</li>
+              <li>Ân hạn nợ gốc 24 tháng. Lãi suất 7,5%/năm sau ân hạn.</li>
+            </ul>
+          </button>
         </div>
 
-        <!-- Tab: Tiến độ chuẩn -->
-        <div class="payment-panel overflow-x-auto rounded-3xl border border-warm-gray shadow-sm" data-panel="standard">
+        <!-- Payment-schedule panels — one visible at a time, driven by .policy-card clicks -->
+        <div class="payment-panel hidden overflow-x-auto rounded-3xl border border-warm-gray shadow-sm bg-white" data-panel="standard">
           <table class="w-full text-sm text-left">
             <thead class="bg-sand text-white text-xs uppercase tracking-wider">
               <tr>
@@ -487,7 +514,7 @@
                 <th class="px-5 py-4">Giá trị thanh toán</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-warm-gray bg-white">
+            <tbody class="divide-y divide-warm-gray">
               <tr><td class="px-5 py-3 font-medium">Đặt cọc</td><td class="px-5 py-3">50 triệu VND</td></tr>
               <tr><td class="px-5 py-3 font-medium">Đợt 1: Trong vòng 7 ngày kể từ thời điểm đặt cọc</td><td class="px-5 py-3">10% giá bán (không bao gồm VAT &amp; tiền đặt cọc)</td></tr>
               <tr><td class="px-5 py-3 font-medium">Đợt 2: Chậm nhất ngày 31/09/2026</td><td class="px-5 py-3">10% giá bán (không bao gồm VAT)</td></tr>
@@ -506,8 +533,7 @@
           </table>
         </div>
 
-        <!-- Tab: Thanh toán sớm -->
-        <div class="payment-panel hidden overflow-x-auto rounded-3xl border border-warm-gray shadow-sm" data-panel="early">
+        <div class="payment-panel overflow-x-auto rounded-3xl border border-warm-gray shadow-sm bg-white" data-panel="early">
           <table class="w-full text-sm text-left">
             <thead class="bg-sand text-white text-xs uppercase tracking-wider">
               <tr>
@@ -515,7 +541,7 @@
                 <th class="px-5 py-4">Giá trị thanh toán</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-warm-gray bg-white">
+            <tbody class="divide-y divide-warm-gray">
               <tr><td class="px-5 py-3 font-medium">Đặt cọc</td><td class="px-5 py-3">50 triệu VND</td></tr>
               <tr><td class="px-5 py-3 font-medium">Đợt 1: Trong vòng 7 ngày kể từ thời điểm đặt cọc</td><td class="px-5 py-3">10% giá bán (không bao gồm VAT &amp; tiền đặt cọc)</td></tr>
               <tr><td class="px-5 py-3 font-medium">Đợt 2: Chậm nhất ngày 31/09/2026</td><td class="px-5 py-3">10% giá bán (không bao gồm VAT)</td></tr>
@@ -526,8 +552,7 @@
           </table>
         </div>
 
-        <!-- Tab: Vay vốn 70% -->
-        <div class="payment-panel hidden overflow-x-auto rounded-3xl border border-warm-gray shadow-sm" data-panel="loan">
+        <div class="payment-panel hidden overflow-x-auto rounded-3xl border border-warm-gray shadow-sm bg-white" data-panel="loan">
           <table class="w-full text-sm text-left">
             <thead class="bg-sand text-white text-xs uppercase tracking-wider">
               <tr>
@@ -536,7 +561,7 @@
                 <th class="px-5 py-4">Ngân hàng giải ngân</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-warm-gray bg-white">
+            <tbody class="divide-y divide-warm-gray">
               <tr><td class="px-5 py-3 font-medium">Đặt cọc</td><td class="px-5 py-3">50 triệu VND</td><td class="px-5 py-3 text-hsg-slate/40">—</td></tr>
               <tr><td class="px-5 py-3 font-medium">Đợt 1: Trong vòng 7 ngày kể từ đặt cọc</td><td class="px-5 py-3">10% giá bán (không bao gồm VAT &amp; tiền đặt cọc)</td><td class="px-5 py-3 text-hsg-slate/40">—</td></tr>
               <tr><td class="px-5 py-3 font-medium">Đợt 2: Chậm nhất ngày 31/09/2026</td><td class="px-5 py-3">10% giá bán (không bao gồm VAT)</td><td class="px-5 py-3 text-hsg-slate/40">—</td></tr>
@@ -547,53 +572,7 @@
           </table>
         </div>
 
-        <p class="text-center text-xs text-hsg-slate/60 mt-6 italic">Nguồn: Bảng tiến độ thanh toán chính thức của Chủ đầu tư. Áp dụng cho phân khu The Bloom — Tòa L1 &amp; L2.</p>
-      </div>
-    </section>
-
-    <!-- Chính sách thanh toán -->
-    <section id="chinh-sach" class="py-20 lg:py-28 bg-ivory scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14">
-          <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">3 phương án linh hoạt</p>
-          <h2 class="font-display text-3xl lg:text-5xl text-hsg-slate mb-4">Chính sách thanh toán</h2>
-          <div class="w-14 h-px bg-sand mx-auto mb-5"></div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-          <article class="bg-white rounded-3xl p-8 border border-warm-gray flex flex-col">
-            <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Phương án 01</p>
-            <h3 class="font-display text-2xl text-hsg-slate mb-4">Thanh toán sớm</h3>
-            <p class="font-display text-5xl text-lum-green mb-4">7%<span class="font-sans text-base text-hsg-slate/60"> chiết khấu</span></p>
-            <ul class="text-sm space-y-2 text-hsg-slate/80 leading-relaxed mt-2">
-              <li>Chiết khấu lên đến 7% giá trị căn hộ.</li>
-              <li>Thanh toán toàn bộ giá trị còn lại trong 30 ngày sau ký HĐMB.</li>
-              <li>Phù hợp khách hàng có dòng tiền sẵn sàng.</li>
-            </ul>
-          </article>
-
-          <article class="bg-white rounded-3xl p-8 border border-warm-gray flex flex-col">
-            <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Phương án 02</p>
-            <h3 class="font-display text-2xl text-hsg-slate mb-4">Thanh toán theo đợt</h3>
-            <p class="font-display text-5xl text-lum-green mb-4">12 đợt<span class="font-sans text-base text-hsg-slate/60"> trong ~3 năm</span></p>
-            <ul class="text-sm space-y-2 text-hsg-slate/80 leading-relaxed mt-2">
-              <li>12 đợt thanh toán trải đều khoảng 3 năm kể từ ký HĐMB.</li>
-              <li>Linh hoạt theo tiến độ xây dựng và bàn giao.</li>
-              <li>Phù hợp dòng tiền dần tích lũy.</li>
-            </ul>
-          </article>
-
-          <article class="bg-lum-green text-ivory rounded-3xl p-8 flex flex-col relative overflow-hidden">
-            <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Phương án 03</p>
-            <h3 class="font-display text-2xl mb-4">Vay ngân hàng 70%</h3>
-            <p class="font-display text-5xl mb-4">0%<span class="font-sans text-base text-sage"> đến Q2/2029</span></p>
-            <ul class="text-sm space-y-2 text-sage leading-relaxed mt-2">
-              <li>Hỗ trợ vay đến 70% giá trị căn hộ.</li>
-              <li><strong class="text-ivory">Lãi suất 0%</strong> tới thời điểm bàn giao Q2/2029.</li>
-              <li>Ân hạn nợ gốc 24 tháng. Lãi suất 7,5%/năm sau ân hạn.</li>
-            </ul>
-          </article>
-        </div>
+        <p class="text-center text-xs text-hsg-slate/60 mt-6 italic mb-12">Nguồn: Bảng tiến độ thanh toán chính thức của Chủ đầu tư. Áp dụng cho phân khu The Bloom — Tòa L1 &amp; L2.</p>
 
         <div class="bg-white rounded-3xl p-6 lg:p-8 border border-sage/40">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
