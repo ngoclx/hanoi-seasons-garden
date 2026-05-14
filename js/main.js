@@ -158,7 +158,7 @@
       const phone = (data.get('phone') || '').toString().trim();
       if (name.length < 2) {
         status.classList.add('text-red-300');
-        status.textContent = 'Vui lòng nhập họ tên (ít nhất 2 ký tự).';
+        status.textContent = 'Vui lòng nhập tên anh/chị (ít nhất 2 ký tự).';
         status.classList.remove('hidden');
         return;
       }
