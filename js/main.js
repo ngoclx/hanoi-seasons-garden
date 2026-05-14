@@ -56,6 +56,22 @@
     });
   });
 
+  // Payment-schedule tabs (Tiến độ thanh toán)
+  document.querySelectorAll('.payment-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.payment-tab').forEach(t => {
+        const active = t.dataset.tab === target;
+        t.classList.toggle('bg-sand', active);
+        t.classList.toggle('text-hsg-slate-dark', active);
+        t.classList.toggle('text-hsg-slate', !active);
+      });
+      document.querySelectorAll('.payment-panel').forEach(p => {
+        p.classList.toggle('hidden', p.dataset.panel !== target);
+      });
+    });
+  });
+
   // Latest posts on index — uses safe DOM methods, no innerHTML
   const latestEl = document.getElementById('latest-posts');
   if (latestEl) {
