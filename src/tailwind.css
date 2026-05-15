@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Make <picture> wrappers transparent to layout so inner <img> behaves
+     identically to an un-wrapped <img>. Needed for parents that use h-full,
+     position:absolute inset:0, aspect-ratio, etc. */
+  picture {
+    display: contents;
+  }
+}

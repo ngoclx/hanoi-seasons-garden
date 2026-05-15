@@ -24,33 +24,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/fonts.css">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'hsg-slate':      '#30413B',
-            'hsg-slate-dark': '#1F2A26',
-            'lum-green':      '#455F39',
-            'lum-green-dark': '#36492C',
-            'sage':           '#B7BA9F',
-            'sage-light':     '#D6D8C5',
-            'sand':           '#B89B7A',
-            'sand-dark':      '#9E835F',
-            'ivory':          '#F1EFE8',
-            'warm-gray':      '#E8E6DE',
-            'zalo':           '#0068FF',
-          },
-          fontFamily: {
-            display: ['SVN-Optima', 'Cormorant Garamond', 'Georgia', 'serif'],
-            sans:    ['Inter', 'system-ui', 'sans-serif'],
-            accent:  ['DFVN-Abygaer', 'cursive'],
-          },
-        },
-      },
-    }
-  </script>
+  <link rel="stylesheet" href="/css/tw.min.css">
+
+  <link rel="preload" as="image" href="/images/hero-aerial.avif" type="image/avif" fetchpriority="high">
 
   <script type="application/ld+json">
   {
@@ -154,7 +130,7 @@
     <!-- Hero -->
     <section id="hero" class="relative min-h-[88vh] flex items-end overflow-hidden">
       <div class="absolute inset-0">
-        <img src="/images/hero-aerial.jpg" alt="LUMIÈRE Hanoi Seasons Garden — Phối cảnh tổng thể dự án" class="w-full h-full object-cover" width="1920" height="1080" loading="eager" fetchpriority="high">
+        <picture><source type="image/avif" srcset="/images/hero-aerial.avif"><source type="image/webp" srcset="/images/hero-aerial.webp"><img src="/images/hero-aerial.jpg" alt="LUMIÈRE Hanoi Seasons Garden — Phối cảnh tổng thể dự án" class="w-full h-full object-cover" width="1920" height="1080" loading="eager" fetchpriority="high"></picture>
         <!-- Top fade so the sticky header sits on a darker band -->
         <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-hsg-slate-dark/70 to-transparent"></div>
         <!-- Bottom fade — opaque at the base, darkens early so the headline is always WCAG-AA on bright skies -->
@@ -218,7 +194,7 @@
             </li>
           </ul>
           <div class="rounded-3xl overflow-hidden shadow-xl">
-            <img src="/images/amenity-entrance-gate.jpg" alt="Lối vào cổng chính LUMIÈRE Hanoi Seasons Garden tại 233 Nguyễn Trãi" class="w-full h-auto" loading="lazy">
+            <picture><source type="image/avif" srcset="/images/amenity-entrance-gate.avif"><source type="image/webp" srcset="/images/amenity-entrance-gate.webp"><img src="/images/amenity-entrance-gate.jpg" alt="Lối vào cổng chính LUMIÈRE Hanoi Seasons Garden tại 233 Nguyễn Trãi" class="w-full h-auto" loading="lazy"></picture>
           </div>
         </div>
 
@@ -269,7 +245,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-xl">
-            <img src="/images/overview-architecture.jpg" alt="Phối cảnh kiến trúc tổng thể LUMIÈRE Hanoi Seasons Garden" class="w-full h-full object-cover" loading="lazy">
+            <picture><source type="image/avif" srcset="/images/overview-architecture.avif"><source type="image/webp" srcset="/images/overview-architecture.webp"><img src="/images/overview-architecture.jpg" alt="Phối cảnh kiến trúc tổng thể LUMIÈRE Hanoi Seasons Garden" class="w-full h-full object-cover" loading="lazy"></picture>
           </div>
           <div class="lg:col-span-5 grid grid-cols-2 gap-3 lg:gap-4 auto-rows-fr">
             <div class="bg-warm-gray rounded-2xl p-5 lg:p-6 text-center flex flex-col justify-center">
@@ -313,7 +289,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
           <article class="bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col">
-            <img src="/images/thebloom-l1-facade.jpg" alt="Tòa L1 — Phân khu The Bloom" class="w-full aspect-[4/3] object-cover" loading="lazy">
+            <picture><source type="image/avif" srcset="/images/thebloom-l1-facade.avif"><source type="image/webp" srcset="/images/thebloom-l1-facade.webp"><img src="/images/thebloom-l1-facade.jpg" alt="Tòa L1 — Phân khu The Bloom" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture>
             <div class="p-8 flex-1 flex flex-col">
               <p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Tòa L1</p>
               <h3 class="font-display text-2xl text-hsg-slate mb-3">The Bloom · L1</h3>
@@ -336,7 +312,7 @@
           </article>
 
           <article class="bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col">
-            <img src="/images/thebloom-l2-facade.jpg" alt="Tòa L2 — Phân khu The Bloom" class="w-full aspect-[4/3] object-cover" loading="lazy">
+            <picture><source type="image/avif" srcset="/images/thebloom-l2-facade.avif"><source type="image/webp" srcset="/images/thebloom-l2-facade.webp"><img src="/images/thebloom-l2-facade.jpg" alt="Tòa L2 — Phân khu The Bloom" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture>
             <div class="p-8 flex-1 flex flex-col">
               <p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Tòa L2</p>
               <h3 class="font-display text-2xl text-hsg-slate mb-3">The Bloom · L2</h3>
@@ -392,36 +368,36 @@
         </div>
 
         <div class="amenity-panel grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-panel="clubhouse">
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-clubhouse-pool.jpg" alt="Bể bơi clubhouse 4 mùa" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Bể bơi 4 mùa</figcaption></figure>
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-clubhouse-bar.jpg" alt="Rooftop bar tại clubhouse LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Rooftop bar</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/amenity-clubhouse-pool.avif"><source type="image/webp" srcset="/images/amenity-clubhouse-pool.webp"><img src="/images/amenity-clubhouse-pool.jpg" alt="Bể bơi clubhouse 4 mùa" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Bể bơi 4 mùa</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/amenity-clubhouse-bar.avif"><source type="image/webp" srcset="/images/amenity-clubhouse-bar.webp"><img src="/images/amenity-clubhouse-bar.jpg" alt="Rooftop bar tại clubhouse LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Rooftop bar</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-business-lounge-l1.jpg" alt="Phòng làm việc chung - Business Lounge tại LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Business lounge</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-library-l1.jpg" alt="Thư viện tòa L1" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Thư viện L1</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-library-l2.jpg" alt="Thư viện tòa L2" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Thư viện L2</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-gym.jpg" alt="Phòng gym và yoga tại LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Gym &amp; Yoga</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-kids.jpg" alt="Kids club - khu vui chơi trẻ em tại LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Kids club</figcaption></figure>
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-clubhouse-overview.jpg" alt="Clubhouse tổng thể" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Clubhouse tổng thể</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/amenity-clubhouse-overview.avif"><source type="image/webp" srcset="/images/amenity-clubhouse-overview.webp"><img src="/images/amenity-clubhouse-overview.jpg" alt="Clubhouse tổng thể" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Clubhouse tổng thể</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-clubhouse-pool.jpg" alt="Bể bơi clubhouse" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Bể bơi indoor</figcaption></figure>
         </div>
 
         <div class="amenity-panel hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-panel="outdoor">
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-waterfall.jpg" alt="Thác nước biểu tượng" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Thác nước biểu tượng</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/amenity-waterfall.avif"><source type="image/webp" srcset="/images/amenity-waterfall.webp"><img src="/images/amenity-waterfall.jpg" alt="Thác nước biểu tượng" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Thác nước biểu tượng</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-water-feature-lobby.jpg" alt="Tiểu cảnh nước" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Tiểu cảnh nước</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-canopy.jpg" alt="Tiện ích mái vòm" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Mái vòm cộng đồng</figcaption></figure>
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-kids-garden.jpg" alt="Vườn diệu kỳ" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Vườn diệu kỳ</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/amenity-kids-garden.avif"><source type="image/webp" srcset="/images/amenity-kids-garden.webp"><img src="/images/amenity-kids-garden.jpg" alt="Vườn diệu kỳ" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Vườn diệu kỳ</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-adventure-garden.jpg" alt="Vườn phiêu lưu" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Vườn phiêu lưu</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-skating.jpg" alt="Khu skating park ngoài trời tại LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Skating park</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-sand-playground.jpg" alt="Khu sân chơi cát" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Sân chơi cát sáng tạo</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-family-pavilion.jpg" alt="Family Pavilion - không gian sinh hoạt gia đình tại LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Family Pavilion</figcaption></figure>
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-entrance-water.jpg" alt="Tiểu cảnh sảnh đón" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Tiểu cảnh sảnh đón</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/amenity-entrance-water.avif"><source type="image/webp" srcset="/images/amenity-entrance-water.webp"><img src="/images/amenity-entrance-water.jpg" alt="Tiểu cảnh sảnh đón" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Tiểu cảnh sảnh đón</figcaption></figure>
         </div>
 
         <div class="amenity-panel hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-panel="integrated">
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-main-lobby-1.jpg" alt="Sảnh đón chính" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Sảnh đón chính</figcaption></figure>
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-main-lobby-2.jpg" alt="Sảnh đón" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Khu vực lễ tân</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/interior-main-lobby-1.avif"><source type="image/webp" srcset="/images/interior-main-lobby-1.webp"><img src="/images/interior-main-lobby-1.jpg" alt="Sảnh đón chính" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Sảnh đón chính</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/interior-main-lobby-2.avif"><source type="image/webp" srcset="/images/interior-main-lobby-2.webp"><img src="/images/interior-main-lobby-2.jpg" alt="Sảnh đón" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Khu vực lễ tân</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-elevator-hall.jpg" alt="Sảnh thang máy" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Sảnh thang máy</figcaption></figure>
           <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/interior-corridor.jpg" alt="Hành lang căn hộ" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Hành lang căn hộ</figcaption></figure>
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/amenity-entrance-gate.jpg" alt="Cổng chính dự án" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Cổng chính dự án</figcaption></figure>
-          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><img src="/images/overview-architecture.jpg" alt="Tổ hợp đô thị" class="w-full aspect-[4/3] object-cover" loading="lazy"><figcaption class="p-4 text-sm">Trường học · phòng khám · shophouse · shopping center · F&amp;B</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/amenity-entrance-gate.avif"><source type="image/webp" srcset="/images/amenity-entrance-gate.webp"><img src="/images/amenity-entrance-gate.jpg" alt="Cổng chính dự án" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Cổng chính dự án</figcaption></figure>
+          <figure class="rounded-2xl overflow-hidden bg-hsg-slate-dark"><picture><source type="image/avif" srcset="/images/overview-architecture.avif"><source type="image/webp" srcset="/images/overview-architecture.webp"><img src="/images/overview-architecture.jpg" alt="Tổ hợp đô thị" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture><figcaption class="p-4 text-sm">Trường học · phòng khám · shophouse · shopping center · F&amp;B</figcaption></figure>
         </div>
       </div>
     </section>
@@ -625,7 +601,7 @@
         </div>
 
         <div class="rounded-3xl overflow-hidden shadow-xl mb-14">
-          <img src="/images/overview-masterplan.jpg" alt="Mặt bằng tổng thể phân khu LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto" loading="lazy">
+          <picture><source type="image/avif" srcset="/images/overview-masterplan.avif"><source type="image/webp" srcset="/images/overview-masterplan.webp"><img src="/images/overview-masterplan.jpg" alt="Mặt bằng tổng thể phân khu LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto" loading="lazy"></picture>
         </div>
 
         <ol class="grid grid-cols-1 md:grid-cols-4 gap-6">

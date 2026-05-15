@@ -10,10 +10,22 @@ Static marketing/sales website for **LUMIÈRE Hanoi Seasons Garden** (Masterise 
 
 ## Tech Stack
 
-- HTML5 static pages — no framework, no build tools, no package.json
-- Tailwind CSS via Play CDN — config inline per page
+- HTML5 static pages — no framework, no bundler for app code
+- Tailwind CSS compiled via CLI to `/css/tw.min.css` (one-time build; output committed)
 - Vanilla JS, no bundler
 - SVN-Optima (display) self-hosted via @font-face; Inter (body) via Google Fonts; DFVN-Abygaer (decorative accent) self-hosted
+
+### Tailwind build
+
+The repo has `package.json`, `tailwind.config.js`, and `src/tailwind.css` for compiling Tailwind. The CDN Play script was removed (PageSpeed flagged it as render-blocking + heavy JIT runtime).
+
+- `npm install` once after clone
+- `npm run build:css` — minified one-shot build → `/css/tw.min.css` (~46 KB minified, ~10 KB gzipped)
+- `npm run watch:css` — rebuilds on file changes during development
+
+**You must run `npm run build:css` after any HTML/JS change that adds new Tailwind utility classes**, otherwise the new class will silently render unstyled. `tailwind.config.js` scans `./*.html`, `./blog/**/*.html`, `./js/**/*.js`, `./blog/**/*.js`. The `css/tw.min.css` artifact is committed (we deploy static — Vercel doesn't run the build).
+
+Custom theme tokens (colors + fontFamily) live in `tailwind.config.js`. Do not re-introduce inline `tailwind.config` `<script>` blocks in HTML; they have no effect without the CDN script.
 
 ## File naming
 
@@ -131,7 +143,7 @@ PDF gated downloads (`docs/floorplans-l*-the-bloom.pdf`) committed at ~10–15MB
 
 ## Deployment
 
-Push to `main` → Vercel auto-deploys. No build command. Static serve.
+Push to `main` → Vercel auto-deploys. No build command on the Vercel side — `css/tw.min.css` is committed. If you added classes locally, run `npm run build:css` and commit the regenerated file before pushing.
 
 ## JavaScript Conventions
 
