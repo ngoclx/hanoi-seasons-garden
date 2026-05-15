@@ -139,7 +139,7 @@ PDF gated downloads (`docs/floorplans-l*-the-bloom.pdf`) committed at ~10–15MB
 - [ ] Confirm bảo lãnh ngân hàng list with Masterise → update §Pháp lý of `index.html` and `llms.txt`
 - [ ] Confirm Bảng giá table — adjust 11-row table in `index.html#bang-gia` if Masterise publishes corrected size ranges or prices
 - [ ] DNS: point `pkdhanoiseasonsgarden.com` apex + `www` to Vercel
-- [ ] (Optional) Add GTM container — paste snippets per langvan pattern into every page's `<head>` and `<body>` start
+- [x] GTM container `GTM-PFQWVHMF` wired into every page's `<head>` (high) + `<body>` start (noscript)
 
 ## Deployment
 
