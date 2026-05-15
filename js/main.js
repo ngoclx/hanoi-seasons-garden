@@ -47,6 +47,8 @@
         t.classList.toggle('bg-sand', active);
         t.classList.toggle('text-hsg-slate-dark', active);
         t.classList.toggle('text-sage', !active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+        t.setAttribute('tabindex', active ? '0' : '-1');
       });
       document.querySelectorAll('.amenity-panel').forEach(p => {
         const show = p.dataset.panel === target;
@@ -83,14 +85,19 @@
           // The small "label" span inside the hero number switches its tone
           const sub = hero.querySelector('span');
           if (sub) {
-            sub.classList.toggle('text-sage', active);
-            sub.classList.toggle('text-hsg-slate/60', !active);
+            sub.classList.toggle('text-sage-light', active);
+            sub.classList.toggle('text-hsg-slate/80', !active);
           }
         }
         const list = c.querySelector('.policy-list');
         if (list) {
-          list.classList.toggle('text-sage', active);
+          list.classList.toggle('text-sage-light', active);
           list.classList.toggle('text-hsg-slate/80', !active);
+        }
+        const eyebrow = c.querySelector('.policy-eyebrow');
+        if (eyebrow) {
+          eyebrow.classList.toggle('text-sage-light', active);
+          eyebrow.classList.toggle('text-sand-deep', !active);
         }
         const badge = c.querySelector('.policy-badge');
         if (badge) badge.classList.toggle('hidden', !active);
@@ -122,7 +129,7 @@
           const body = document.createElement('div');
           body.className = 'p-5 flex flex-col flex-1';
           const meta = document.createElement('p');
-          meta.className = 'text-xs tracking-[0.3em] uppercase text-sand mb-2';
+          meta.className = 'text-xs tracking-[0.3em] uppercase text-sand-deep mb-2';
           meta.textContent = p.category;
           body.appendChild(meta);
           const title = document.createElement('h3');
@@ -130,7 +137,7 @@
           title.textContent = p.title;
           body.appendChild(title);
           const excerpt = document.createElement('p');
-          excerpt.className = 'text-sm text-hsg-slate/70 leading-relaxed flex-1';
+          excerpt.className = 'text-sm text-hsg-slate/80 leading-relaxed flex-1';
           excerpt.textContent = p.excerpt;
           body.appendChild(excerpt);
           const cta = document.createElement('span');

@@ -19,10 +19,10 @@
         const body = document.createElement('div');
         body.className = 'p-4 flex-1 flex flex-col';
         const cat = document.createElement('p');
-        cat.className = 'text-xs tracking-[0.3em] uppercase text-sand mb-2';
+        cat.className = 'text-xs tracking-[0.3em] uppercase text-sand-deep mb-2';
         cat.textContent = p.category;
         body.appendChild(cat);
-        const title = document.createElement('h4');
+        const title = document.createElement('h3');
         title.className = 'font-display text-base text-hsg-slate leading-snug';
         title.textContent = p.title;
         body.appendChild(title);

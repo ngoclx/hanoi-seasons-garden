@@ -131,10 +131,10 @@
 
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">36–46</p><p class="text-xs uppercase tracking-wider text-hsg-slate/60 mt-2">tầng (xác nhận với CĐT)</p></div>
-        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">8</p><p class="text-xs uppercase tracking-wider text-hsg-slate/60 mt-2">loại căn</p></div>
-        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">3 hầm</p><p class="text-xs uppercase tracking-wider text-hsg-slate/60 mt-2">đỗ xe</p></div>
-        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">Q2/2029</p><p class="text-xs uppercase tracking-wider text-hsg-slate/60 mt-2">bàn giao</p></div>
+        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">36–46</p><p class="text-xs uppercase tracking-wider text-hsg-slate/80 mt-2">tầng (xác nhận với CĐT)</p></div>
+        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">8</p><p class="text-xs uppercase tracking-wider text-hsg-slate/80 mt-2">loại căn</p></div>
+        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">3 hầm</p><p class="text-xs uppercase tracking-wider text-hsg-slate/80 mt-2">đỗ xe</p></div>
+        <div class="bg-warm-gray rounded-3xl p-6 text-center"><p class="font-display text-3xl text-lum-green">Q2/2029</p><p class="text-xs uppercase tracking-wider text-hsg-slate/80 mt-2">bàn giao</p></div>
       </div>
     </section>
 
@@ -142,51 +142,51 @@
     <section id="mat-bang" class="py-20 bg-ivory">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Layout điển hình</p>
+          <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Layout điển hình</p>
           <h2 class="font-display text-3xl lg:text-5xl text-hsg-slate mb-4">Mặt bằng từng loại căn</h2>
           <div class="w-14 h-px bg-sand mx-auto"></div>
         </div>
         <div class="flex flex-wrap justify-center gap-2 mb-10" role="tablist">
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="studio">Studio</button>
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-lum-green text-ivory" data-fp="1pn">1PN</button>
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="2pn">2PN</button>
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="3pn">3PN</button>
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="4pn">4PN</button>
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="duplex">Duplex</button>
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="penthouse">Penthouse</button>
-          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="duplex-penthouse">Duplex Penthouse</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="studio" role="tab" id="tab-fp-studio" aria-controls="panel-fp-studio" aria-selected="false" tabindex="-1">Studio</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-lum-green text-ivory" data-fp="1pn" role="tab" id="tab-fp-1pn" aria-controls="panel-fp-1pn" aria-selected="true" tabindex="0">1PN</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="2pn" role="tab" id="tab-fp-2pn" aria-controls="panel-fp-2pn" aria-selected="false" tabindex="-1">2PN</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="3pn" role="tab" id="tab-fp-3pn" aria-controls="panel-fp-3pn" aria-selected="false" tabindex="-1">3PN</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="4pn" role="tab" id="tab-fp-4pn" aria-controls="panel-fp-4pn" aria-selected="false" tabindex="-1">4PN</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="duplex" role="tab" id="tab-fp-duplex" aria-controls="panel-fp-duplex" aria-selected="false" tabindex="-1">Duplex</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="penthouse" role="tab" id="tab-fp-penthouse" aria-controls="panel-fp-penthouse" aria-selected="false" tabindex="-1">Penthouse</button>
+          <button class="fp-tab px-4 py-2 text-xs uppercase tracking-wider rounded-full bg-warm-gray text-hsg-slate" data-fp="duplex-penthouse" role="tab" id="tab-fp-duplex-penthouse" aria-controls="panel-fp-duplex-penthouse" aria-selected="false" tabindex="-1">Duplex Penthouse</button>
         </div>
 
-        <div class="fp-panel hidden" data-fp-panel="studio">
+        <div class="fp-panel hidden" data-fp-panel="studio" role="tabpanel" id="panel-fp-studio" aria-labelledby="tab-fp-studio">
           <div class="bg-white rounded-3xl shadow-sm p-10 text-center">
-            <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Studio · 28,5 m²</p>
+            <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Studio · 28,5 m²</p>
             <p class="font-display text-2xl text-hsg-slate mb-3">Mặt bằng đang được cập nhật</p>
-            <p class="text-sm text-hsg-slate/70 max-w-md mx-auto">Tài liệu mặt bằng điển hình căn Studio Tòa L1 sẽ được Chủ đầu tư bổ sung. Vui lòng liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để được gửi sớm nhất.</p>
+            <p class="text-sm text-hsg-slate/80 max-w-md mx-auto">Tài liệu mặt bằng điển hình căn Studio Tòa L1 sẽ được Chủ đầu tư bổ sung. Vui lòng liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để được gửi sớm nhất.</p>
           </div>
         </div>
-        <div class="fp-panel" data-fp-panel="1pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-14.jpg" alt="Mặt bằng điển hình căn 1PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">1PN · diện tích thông thủy 46,6 – 59,2 m² (DT tim ~51 – 60 m²) — các biến thể CH.11 và CH.09</figcaption></figure></div>
-        <div class="fp-panel hidden" data-fp-panel="2pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-18.jpg" alt="Mặt bằng điển hình căn 2PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">2PN · diện tích thông thủy 67,2 – 87,5 m² (DT tim ~78 – 91 m²) — biến thể CH.12A,15A và CH.18A,19,20</figcaption></figure></div>
-        <div class="fp-panel hidden" data-fp-panel="3pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-20.jpg" alt="Mặt bằng điển hình căn 3PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">3PN · diện tích thông thủy 97 – 120,1 m² (DT tim ~83 – 92 m² cho biến thể nhỏ) — CH.05A và CH.02</figcaption></figure></div>
-        <div class="fp-panel hidden" data-fp-panel="4pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-25.jpg" alt="Mặt bằng điển hình căn 4PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">4PN · diện tích thông thủy 126,4 – 141,8 m² (DT tim ~143 – 152 m²) — CH.20,22,23 và CH.06</figcaption></figure></div>
-        <div class="fp-panel hidden" data-fp-panel="duplex">
+        <div class="fp-panel" data-fp-panel="1pn" role="tabpanel" id="panel-fp-1pn" aria-labelledby="tab-fp-1pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-14.jpg" alt="Mặt bằng điển hình căn 1PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">1PN · diện tích thông thủy 46,6 – 59,2 m² (DT tim ~51 – 60 m²) — các biến thể CH.11 và CH.09</figcaption></figure></div>
+        <div class="fp-panel hidden" data-fp-panel="2pn" role="tabpanel" id="panel-fp-2pn" aria-labelledby="tab-fp-2pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-18.jpg" alt="Mặt bằng điển hình căn 2PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">2PN · diện tích thông thủy 67,2 – 87,5 m² (DT tim ~78 – 91 m²) — biến thể CH.12A,15A và CH.18A,19,20</figcaption></figure></div>
+        <div class="fp-panel hidden" data-fp-panel="3pn" role="tabpanel" id="panel-fp-3pn" aria-labelledby="tab-fp-3pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-20.jpg" alt="Mặt bằng điển hình căn 3PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">3PN · diện tích thông thủy 97 – 120,1 m² (DT tim ~83 – 92 m² cho biến thể nhỏ) — CH.05A và CH.02</figcaption></figure></div>
+        <div class="fp-panel hidden" data-fp-panel="4pn" role="tabpanel" id="panel-fp-4pn" aria-labelledby="tab-fp-4pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l1-page-25.jpg" alt="Mặt bằng điển hình căn 4PN Tòa L1 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">4PN · diện tích thông thủy 126,4 – 141,8 m² (DT tim ~143 – 152 m²) — CH.20,22,23 và CH.06</figcaption></figure></div>
+        <div class="fp-panel hidden" data-fp-panel="duplex" role="tabpanel" id="panel-fp-duplex" aria-labelledby="tab-fp-duplex">
           <div class="bg-white rounded-3xl shadow-sm p-10 text-center">
-            <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Duplex · Diện tích đang cập nhật</p>
+            <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Duplex · Diện tích đang cập nhật</p>
             <p class="font-display text-2xl text-hsg-slate mb-3">Mặt bằng đang được cập nhật</p>
-            <p class="text-sm text-hsg-slate/70 max-w-md mx-auto">Layout Duplex Tòa L1 nằm trong nhóm căn hộ đặc biệt, sẽ được Chủ đầu tư công bố sát thời điểm mở bán. Liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để nhận thông tin sớm.</p>
+            <p class="text-sm text-hsg-slate/80 max-w-md mx-auto">Layout Duplex Tòa L1 nằm trong nhóm căn hộ đặc biệt, sẽ được Chủ đầu tư công bố sát thời điểm mở bán. Liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để nhận thông tin sớm.</p>
           </div>
         </div>
-        <div class="fp-panel hidden" data-fp-panel="penthouse">
+        <div class="fp-panel hidden" data-fp-panel="penthouse" role="tabpanel" id="panel-fp-penthouse" aria-labelledby="tab-fp-penthouse">
           <div class="bg-white rounded-3xl shadow-sm p-10 text-center">
-            <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Penthouse · Diện tích đang cập nhật</p>
+            <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Penthouse · Diện tích đang cập nhật</p>
             <p class="font-display text-2xl text-hsg-slate mb-3">Mặt bằng đang được cập nhật</p>
-            <p class="text-sm text-hsg-slate/70 max-w-md mx-auto">Penthouse Tòa L1 là dòng căn hộ giới hạn ở các tầng cao nhất, layout sẽ được công bố theo lộ trình. Liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để nhận tư vấn.</p>
+            <p class="text-sm text-hsg-slate/80 max-w-md mx-auto">Penthouse Tòa L1 là dòng căn hộ giới hạn ở các tầng cao nhất, layout sẽ được công bố theo lộ trình. Liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để nhận tư vấn.</p>
           </div>
         </div>
-        <div class="fp-panel hidden" data-fp-panel="duplex-penthouse">
+        <div class="fp-panel hidden" data-fp-panel="duplex-penthouse" role="tabpanel" id="panel-fp-duplex-penthouse" aria-labelledby="tab-fp-duplex-penthouse">
           <div class="bg-white rounded-3xl shadow-sm p-10 text-center">
-            <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Duplex Penthouse · Diện tích đang cập nhật</p>
+            <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Duplex Penthouse · Diện tích đang cập nhật</p>
             <p class="font-display text-2xl text-hsg-slate mb-3">Mặt bằng đang được cập nhật</p>
-            <p class="text-sm text-hsg-slate/70 max-w-md mx-auto">Duplex Penthouse là dòng căn hộ tinh hoa nhất, số lượng rất giới hạn. Liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để nhận thông tin riêng.</p>
+            <p class="text-sm text-hsg-slate/80 max-w-md mx-auto">Duplex Penthouse là dòng căn hộ tinh hoa nhất, số lượng rất giới hạn. Liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để nhận thông tin riêng.</p>
           </div>
         </div>
 
@@ -200,7 +200,7 @@
     <section id="noi-that" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Bộ sưu tập phối cảnh</p>
+          <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Bộ sưu tập phối cảnh</p>
           <h2 class="font-display text-3xl lg:text-5xl text-hsg-slate mb-4">Phối cảnh nội thất</h2>
           <div class="w-14 h-px bg-sand mx-auto"></div>
         </div>
@@ -235,7 +235,7 @@
             <div><p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Dự án</p><p class="text-base text-sage leading-relaxed">LUMIÈRE Hanoi Seasons Garden<br>233 Nguyễn Trãi, Thanh Xuân, Hà Nội</p></div>
           </div>
           <form id="lead-form" class="lg:col-span-3 bg-hsg-slate-dark/60 backdrop-blur rounded-3xl p-6 lg:p-8 border border-sage/20 space-y-4" novalidate>
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Do not fill" style="position:absolute;left:-9999px">
             <div><label for="lf-name" class="block text-xs uppercase tracking-wider text-sage mb-2">Tên anh/chị *</label><input id="lf-name" name="name" type="text" required minlength="2" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Mr Lâm"></div>
             <div><label for="lf-phone" class="block text-xs uppercase tracking-wider text-sage mb-2">Số điện thoại *</label><input id="lf-phone" name="phone" type="tel" required pattern="0[0-9]{9}" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="09xx xxx xxx"></div>
             <div><label for="lf-msg" class="block text-xs uppercase tracking-wider text-sage mb-2">Nội dung quan tâm</label><textarea id="lf-msg" name="message" rows="3" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Loại căn quan tâm, ngân sách dự kiến..."></textarea></div>
@@ -249,7 +249,7 @@
 
     <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-hsg-slate text-ivory px-3 py-2 flex gap-2 shadow-2xl">
       <a href="tel:0564928999" class="flex-1 text-center bg-lum-green py-3 text-xs uppercase tracking-wider rounded-sm">Gọi PKD</a>
-      <a href="https://zalo.me/0564928999" class="flex-1 text-center bg-zalo py-3 text-xs uppercase tracking-wider rounded-sm">Zalo</a>
+      <a href="https://zalo.me/0564928999" class="flex-1 text-center bg-[#0057CC] py-3 text-xs uppercase tracking-wider rounded-sm font-semibold">Zalo</a>
       <a href="#lien-he" class="flex-1 text-center bg-sand text-hsg-slate-dark py-3 text-xs uppercase tracking-wider rounded-sm">Tư vấn</a>
     </div>
 
@@ -268,14 +268,14 @@
           <p class="text-sm text-sage leading-relaxed">Phòng Kinh Doanh — Phân phối chính thức dự án LUMIÈRE Hanoi Seasons Garden tại 233 Nguyễn Trãi, Hà Nội.</p>
         </div>
         <div>
-          <h4 class="font-display text-lg mb-3">Liên hệ</h4>
+          <h3 class="font-display text-lg mb-3">Liên hệ</h3>
           <ul class="text-sm space-y-2 text-sage">
             <li><a href="tel:0564928999" class="hover:text-sand">Hotline: 0564.928.999</a></li>
             <li><a href="https://zalo.me/0564928999" class="hover:text-sand" rel="noopener">Zalo: zalo.me/0564928999</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-display text-lg mb-3">Liên kết</h4>
+          <h3 class="font-display text-lg mb-3">Liên kết</h3>
           <ul class="text-sm space-y-2 text-sage">
             <li><a href="/#tong-quan" class="hover:text-sand">Tổng quan dự án</a></li>
             <li><a href="/#the-bloom" class="hover:text-sand">Phân khu The Bloom</a></li>
@@ -287,7 +287,7 @@
       </div>
       <div class="border-t border-hsg-slate pt-6 text-xs text-sage leading-relaxed">
         <p class="mb-2">Website cung cấp bởi Phòng Kinh Doanh dự án LUMIÈRE Hanoi Seasons Garden — không phải trang thông tin chính thức từ Chủ đầu tư Masterise Homes. Thông tin có thể thay đổi theo chính sách của Chủ đầu tư.</p>
-        <p>© <span id="year"></span> PKD Hanoi Seasons Garden. Phân phối chính thức.</p>
+        <p>© <span id="year"></span> PKD Hanoi Seasons Garden. Phân phối chính thức bởi Wonder Homes — Đại lý phân phối chiến lược dự án (F1).</p>
       </div>
     </div>
   </footer>

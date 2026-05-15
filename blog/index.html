@@ -95,7 +95,7 @@
     <section class="py-16 lg:py-20 bg-ivory">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <p class="text-xs tracking-[0.3em] text-sand uppercase mb-3">Cập nhật &amp; phân tích</p>
+          <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Cập nhật &amp; phân tích</p>
           <h1 class="font-display text-4xl lg:text-6xl text-hsg-slate mb-4">Tin tức dự án</h1>
           <div class="w-14 h-px bg-sand mx-auto"></div>
         </div>
@@ -134,7 +134,7 @@
       const body = document.createElement('div');
       body.className = 'p-5 flex flex-col flex-1';
       const meta = document.createElement('p');
-      meta.className = 'text-xs tracking-[0.3em] uppercase text-sand mb-2';
+      meta.className = 'text-xs tracking-[0.3em] uppercase text-sand-deep mb-2';
       meta.textContent = `${p.category} · ${p.date}`;
       body.appendChild(meta);
       const t = document.createElement('h3');
@@ -142,7 +142,7 @@
       t.textContent = p.title;
       body.appendChild(t);
       const ex = document.createElement('p');
-      ex.className = 'text-sm text-hsg-slate/70 flex-1 leading-relaxed';
+      ex.className = 'text-sm text-hsg-slate/80 flex-1 leading-relaxed';
       ex.textContent = p.excerpt;
       body.appendChild(ex);
       a.appendChild(body);
@@ -172,14 +172,14 @@
           <p class="text-sm text-sage leading-relaxed">Phòng Kinh Doanh — Phân phối chính thức dự án LUMIÈRE Hanoi Seasons Garden tại 233 Nguyễn Trãi, Hà Nội.</p>
         </div>
         <div>
-          <h4 class="font-display text-lg mb-3">Liên hệ</h4>
+          <h3 class="font-display text-lg mb-3">Liên hệ</h3>
           <ul class="text-sm space-y-2 text-sage">
             <li><a href="tel:0564928999" class="hover:text-sand">Hotline: 0564.928.999</a></li>
             <li><a href="https://zalo.me/0564928999" class="hover:text-sand" rel="noopener">Zalo: zalo.me/0564928999</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-display text-lg mb-3">Liên kết</h4>
+          <h3 class="font-display text-lg mb-3">Liên kết</h3>
           <ul class="text-sm space-y-2 text-sage">
             <li><a href="/#tong-quan" class="hover:text-sand">Tổng quan dự án</a></li>
             <li><a href="/#the-bloom" class="hover:text-sand">Phân khu The Bloom</a></li>
@@ -191,7 +191,7 @@
       </div>
       <div class="border-t border-hsg-slate pt-6 text-xs text-sage leading-relaxed">
         <p class="mb-2">Website cung cấp bởi Phòng Kinh Doanh dự án LUMIÈRE Hanoi Seasons Garden — không phải trang thông tin chính thức từ Chủ đầu tư Masterise Homes. Thông tin có thể thay đổi theo chính sách của Chủ đầu tư.</p>
-        <p>© <span id="year"></span> PKD Hanoi Seasons Garden. Phân phối chính thức.</p>
+        <p>© <span id="year"></span> PKD Hanoi Seasons Garden. Phân phối chính thức bởi Wonder Homes — Đại lý phân phối chiến lược dự án (F1).</p>
       </div>
     </div>
   </footer>

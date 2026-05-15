@@ -17,6 +17,7 @@ module.exports = {
         'sage-light':     '#D6D8C5',
         'sand':           '#B89B7A',
         'sand-dark':      '#9E835F',
+        'sand-deep':      '#876141',
         'ivory':          '#F1EFE8',
         'warm-gray':      '#E8E6DE',
         'zalo':           '#0068FF',

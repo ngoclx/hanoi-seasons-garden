@@ -9,6 +9,8 @@
         t.classList.toggle('text-ivory', active);
         t.classList.toggle('bg-warm-gray', !active);
         t.classList.toggle('text-hsg-slate', !active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+        t.setAttribute('tabindex', active ? '0' : '-1');
       });
       document.querySelectorAll('.fp-panel').forEach(p => {
         p.classList.toggle('hidden', p.dataset.fpPanel !== target);
