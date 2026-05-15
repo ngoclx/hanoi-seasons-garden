@@ -19,9 +19,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/SVN-Optima-Regular.woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
 
   <link rel="stylesheet" href="/css/tw.min.css">
@@ -66,7 +65,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
         <a href="/" class="flex-shrink-0 flex items-center">
-          <img src="/images/logo-lumiere-hsg.png" alt="LUMIÈRE Hanoi Seasons Garden" class="h-8 lg:h-10 w-auto">
+          <img src="/images/logo-lumiere-hsg.png" width="3604" height="1769" alt="LUMIÈRE Hanoi Seasons Garden" class="h-8 lg:h-10 w-auto">
         </a>
         <nav class="hidden lg:flex items-center space-x-6">
           <a href="/#vi-tri" class="text-sm font-medium text-hsg-slate hover:text-lum-green transition-colors">Vị Trí</a>
@@ -115,7 +114,7 @@
     <!-- Sub-hero -->
     <section id="hero" class="relative min-h-[60vh] flex items-end overflow-hidden">
       <div class="absolute inset-0">
-        <picture><source type="image/avif" srcset="/images/thebloom-l2-facade.avif"><source type="image/webp" srcset="/images/thebloom-l2-facade.webp"><img src="/images/thebloom-l2-facade.jpg" alt="Phối cảnh facade Tòa L2 — The Bloom" class="w-full h-full object-cover" loading="eager"></picture>
+        <picture><source type="image/avif" srcset="/images/thebloom-l2-facade-768.avif 768w, /images/thebloom-l2-facade-1280.avif 1280w, /images/thebloom-l2-facade.avif 1920w" sizes="100vw"><source type="image/webp" srcset="/images/thebloom-l2-facade-768.webp 768w, /images/thebloom-l2-facade-1280.webp 1280w, /images/thebloom-l2-facade.webp 1920w" sizes="100vw"><img src="/images/thebloom-l2-facade.jpg" width="1920" height="999" alt="Phối cảnh facade Tòa L2 — The Bloom" class="w-full h-full object-cover" loading="eager"></picture>
         <!-- Top dark band so the sticky header sits on a darker strip -->
         <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-hsg-slate-dark/65 to-transparent"></div>
         <!-- Bottom dark fade so the hero copy meets WCAG-AA contrast on bright skies -->
@@ -164,10 +163,10 @@
             <p class="text-sm text-hsg-slate/80 max-w-md mx-auto">Tài liệu mặt bằng điển hình căn Studio Tòa L2 sẽ được Chủ đầu tư bổ sung. Vui lòng liên hệ <a href="tel:0564928999" class="text-lum-green font-semibold hover:text-lum-green-dark">0564.928.999</a> để được gửi sớm nhất.</p>
           </div>
         </div>
-        <div class="fp-panel" data-fp-panel="1pn" role="tabpanel" id="panel-fp-1pn" aria-labelledby="tab-fp-1pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-13.jpg" alt="Mặt bằng điển hình căn 1PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">1PN · diện tích thông thủy 46,6 – 59,2 m² (DT tim ~52 – 55 m²) — biến thể CH.05/06/08A và CH.02</figcaption></figure></div>
-        <div class="fp-panel hidden" data-fp-panel="2pn" role="tabpanel" id="panel-fp-2pn" aria-labelledby="tab-fp-2pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-16.jpg" alt="Mặt bằng điển hình căn 2PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">2PN · diện tích thông thủy 67,2 – 87,5 m² (DT tim ~81 – 82 m²) — biến thể CH.16 và CH.05A</figcaption></figure></div>
-        <div class="fp-panel hidden" data-fp-panel="3pn" role="tabpanel" id="panel-fp-3pn" aria-labelledby="tab-fp-3pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-19.jpg" alt="Mặt bằng điển hình căn 3PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">3PN · diện tích thông thủy 97 – 120,1 m² (DT tim ~111 – 117 m²) — biến thể CH.15 và CH.18,22,26</figcaption></figure></div>
-        <div class="fp-panel hidden" data-fp-panel="4pn" role="tabpanel" id="panel-fp-4pn" aria-labelledby="tab-fp-4pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-21.jpg" alt="Mặt bằng điển hình căn 4PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">4PN · diện tích thông thủy 126,4 – 141,8 m² — biến thể lớn nhất của Tòa L2</figcaption></figure></div>
+        <div class="fp-panel" data-fp-panel="1pn" role="tabpanel" id="panel-fp-1pn" aria-labelledby="tab-fp-1pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-13.jpg" width="1600" height="1104" alt="Mặt bằng điển hình căn 1PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">1PN · diện tích thông thủy 46,6 – 59,2 m² (DT tim ~52 – 55 m²) — biến thể CH.05/06/08A và CH.02</figcaption></figure></div>
+        <div class="fp-panel hidden" data-fp-panel="2pn" role="tabpanel" id="panel-fp-2pn" aria-labelledby="tab-fp-2pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-16.jpg" width="1600" height="1104" alt="Mặt bằng điển hình căn 2PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">2PN · diện tích thông thủy 67,2 – 87,5 m² (DT tim ~81 – 82 m²) — biến thể CH.16 và CH.05A</figcaption></figure></div>
+        <div class="fp-panel hidden" data-fp-panel="3pn" role="tabpanel" id="panel-fp-3pn" aria-labelledby="tab-fp-3pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-19.jpg" width="1600" height="1104" alt="Mặt bằng điển hình căn 3PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">3PN · diện tích thông thủy 97 – 120,1 m² (DT tim ~111 – 117 m²) — biến thể CH.15 và CH.18,22,26</figcaption></figure></div>
+        <div class="fp-panel hidden" data-fp-panel="4pn" role="tabpanel" id="panel-fp-4pn" aria-labelledby="tab-fp-4pn"><figure class="bg-white rounded-3xl shadow-sm overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/floorplan-l2-page-21.jpg" width="1600" height="1104" alt="Mặt bằng điển hình căn 4PN Tòa L2 — LUMIÈRE Hanoi Seasons Garden" class="w-full h-auto"><figcaption class="p-5 text-sm text-hsg-slate/80">4PN · diện tích thông thủy 126,4 – 141,8 m² — biến thể lớn nhất của Tòa L2</figcaption></figure></div>
         <div class="fp-panel hidden" data-fp-panel="duplex" role="tabpanel" id="panel-fp-duplex" aria-labelledby="tab-fp-duplex">
           <div class="bg-white rounded-3xl shadow-sm p-10 text-center">
             <p class="text-xs tracking-[0.3em] text-sand-deep uppercase mb-3">Duplex · Diện tích đang cập nhật</p>
@@ -205,15 +204,15 @@
           <div class="w-14 h-px bg-sand mx-auto"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-2br-living-1.jpg" alt="Phòng khách - bếp căn hộ 2 phòng ngủ tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-2br-master.jpg" alt="Phòng ngủ chính căn hộ 2 phòng ngủ tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-4br-living-op1.jpg" alt="Phòng khách - bếp căn hộ 4 phòng ngủ (phương án 1) tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-4br-master.jpg" alt="Phòng ngủ chính căn hộ 4 phòng ngủ tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><picture><source type="image/avif" srcset="/images/interior-main-lobby-1.avif"><source type="image/webp" srcset="/images/interior-main-lobby-1.webp"><img src="/images/interior-main-lobby-1.jpg" alt="Sảnh đón chính Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-library-l2.jpg" alt="Thư viện Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-library-l2.jpg" alt="Thư viện Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-corridor.jpg" alt="Hành lang căn hộ Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
-          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-elevator-hall.jpg" alt="Sảnh thang máy Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-2br-living-1.jpg" width="1600" height="1013" alt="Phòng khách - bếp căn hộ 2 phòng ngủ tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-2br-master.jpg" width="1600" height="937" alt="Phòng ngủ chính căn hộ 2 phòng ngủ tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-4br-living-op1.jpg" width="1600" height="640" alt="Phòng khách - bếp căn hộ 4 phòng ngủ (phương án 1) tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-4br-master.jpg" width="1600" height="1068" alt="Phòng ngủ chính căn hộ 4 phòng ngủ tại Tòa L2 LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><picture><source type="image/avif" srcset="/images/interior-main-lobby-1-768.avif 768w, /images/interior-main-lobby-1-1280.avif 1280w, /images/interior-main-lobby-1.avif 1920w" sizes="(min-width: 1024px) 50vw, 100vw"><source type="image/webp" srcset="/images/interior-main-lobby-1-768.webp 768w, /images/interior-main-lobby-1-1280.webp 1280w, /images/interior-main-lobby-1.webp 1920w" sizes="(min-width: 1024px) 50vw, 100vw"><img src="/images/interior-main-lobby-1.jpg" width="1600" height="1049" alt="Sảnh đón chính Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></picture></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-library-l2.jpg" width="1600" height="800" alt="Thư viện Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-library-l2.jpg" width="1600" height="800" alt="Thư viện Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-corridor.jpg" width="1600" height="1333" alt="Hành lang căn hộ Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
+          <figure class="rounded-2xl overflow-hidden cursor-zoom-in" data-lightbox><img src="/images/interior-elevator-hall.jpg" width="1600" height="1600" alt="Sảnh thang máy Tòa L2 - LUMIÈRE Hanoi Seasons Garden" class="w-full aspect-[4/3] object-cover" loading="lazy"></figure>
         </div>
       </div>
     </section>
@@ -264,7 +263,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
         <div>
-          <img src="/images/logo-lumiere-hsg-white.png" alt="LUMIÈRE Hanoi Seasons Garden" class="h-10 w-auto mb-4">
+          <img src="/images/logo-lumiere-hsg-white.png" width="3604" height="1769" alt="LUMIÈRE Hanoi Seasons Garden" class="h-10 w-auto mb-4">
           <p class="text-sm text-sage leading-relaxed">Phòng Kinh Doanh — Phân phối chính thức dự án LUMIÈRE Hanoi Seasons Garden tại 233 Nguyễn Trãi, Hà Nội.</p>
         </div>
         <div>
