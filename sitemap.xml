@@ -26,8 +26,20 @@
   </url>
   <url>
     <loc>https://www.pkdhanoiseasonsgarden.com/blog/</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/vinhomes-cao-xa-la-galaxy-lumiere-hanoi-seasons-garden.html</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/truc-nguyen-trai-2026-trien-vong-bds-tay-ha-noi.html</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
