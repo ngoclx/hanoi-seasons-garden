@@ -176,10 +176,15 @@
         return;
       }
       try {
-        const resp = await fetch('https://formspree.io/f/mzdoqjdr', {
+        const params = new URLSearchParams();
+        for (const [k, v] of data.entries()) params.append(k, v.toString());
+        const resp = await fetch('/api/lead', {
           method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' },
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json',
+          },
+          body: params,
         });
         if (!resp.ok) throw new Error('submit_failed');
         status.classList.add('text-sand');

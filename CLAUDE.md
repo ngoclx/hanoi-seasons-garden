@@ -104,6 +104,18 @@ Posts are static HTML with metadata in `blog/posts.json`.
 - Zalo: zalo.me/0564928999
 - Phone validation regex (lead form): `/^0\d{9}$/`
 
+## Lead form pipeline
+
+The lead form (`#lead-form` in `index.html`) posts URL-encoded data to `/api/lead` (a Vercel serverless function in `api/lead.js`). The function validates the payload server-side, then forwards a formatted message to Telegram bot `@pkdbdshn_bot`, which pings the configured chat (currently Xuan Ngoc Ly's private chat, ID `6200358915`). Message body includes a `zalo.me/<phone>` deep-link so one tap from the notification opens Zalo chat with the lead.
+
+Required Vercel env vars (set in Project → Settings → Environment Variables, all three environments):
+- `TELEGRAM_BOT_TOKEN` — the bot HTTP API token from @BotFather
+- `TELEGRAM_CHAT_ID` — numeric chat ID (private or group)
+
+To route alerts to a group chat instead: create the group, add `@pkdbdshn_bot`, send any message in the group, then `curl https://api.telegram.org/bot<TOKEN>/getUpdates` and use the negative `chat.id` returned. Update the env var, redeploy.
+
+Server-side validation mirrors the client: name ≥ 2 chars, phone matches `/^0\d{9}$/`. Honeypot `_gotcha` silently returns 200. Function logs to Vercel's runtime logs on Telegram errors.
+
 ## Image pipeline
 
 Originals live in `/materials/` (gitignored). Optimized outputs live in `/images/`:
@@ -135,7 +147,7 @@ PDF gated downloads (`docs/floorplans-l*-the-bloom.pdf`) committed at ~10–15MB
 
 ## Pre-launch checklist
 
-- [ ] Replace `https://formspree.io/f/REPLACE_ME` in `js/main.js`
+- [x] Lead form posts to `/api/lead` (Vercel function → Telegram bot `@pkdbdshn_bot`)
 - [ ] Confirm bảo lãnh ngân hàng list with Masterise → update §Pháp lý of `index.html` and `llms.txt`
 - [ ] Confirm Bảng giá table — adjust 11-row table in `index.html#bang-gia` if Masterise publishes corrected size ranges or prices
 - [ ] DNS: point `pkdhanoiseasonsgarden.com` apex + `www` to Vercel
