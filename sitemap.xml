@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.pkdhanoiseasonsgarden.com/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -26,9 +26,33 @@
   </url>
   <url>
     <loc>https://www.pkdhanoiseasonsgarden.com/blog/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/dinh-chuan-hang-hieu-chien-luoc-masterise-2026.html</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/lumiere-hsg-lua-chon-gia-dinh-da-the-he.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/be-lai-gia-280-xuong-120-180-trieu-lumiere-hsg.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pkdhanoiseasonsgarden.com/blog/cap-nhat-bang-gia-khao-sat-lumiere-hsg-17-05.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.pkdhanoiseasonsgarden.com/blog/vinhomes-cao-xa-la-galaxy-lumiere-hanoi-seasons-garden.html</loc>
@@ -62,7 +86,7 @@
   </url>
   <url>
     <loc>https://www.pkdhanoiseasonsgarden.com/blog/bang-gia-lumiere-hanoi-seasons-garden-2026.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
