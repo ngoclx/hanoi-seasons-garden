@@ -152,10 +152,9 @@
   }
 
   // Lead form — uses safe DOM, no innerHTML
-  const leadForm = document.getElementById('lead-form');
-  if (leadForm) {
-    const status = document.getElementById('lf-status');
-    const PHONE_RE = /^0\d{9}$/;
+  const PHONE_RE = /^0\d{9}$/;
+  document.querySelectorAll('form.lead-form').forEach((leadForm) => {
+    const status = leadForm.querySelector('.lf-status');
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       status.classList.remove('hidden', 'text-sand', 'text-red-300');
@@ -197,7 +196,7 @@
         status.classList.remove('hidden');
       }
     });
-  }
+  });
 
   // Amenity lightbox — open any tiện ích figure in full-screen, navigate prev/next within the active tab
   const aLb = document.getElementById('amenity-lightbox');

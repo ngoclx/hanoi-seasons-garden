@@ -138,26 +138,38 @@
 
   <main>
     <!-- Hero -->
-    <section id="hero" class="relative min-h-[88vh] flex items-end overflow-hidden">
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <picture><source type="image/avif" srcset="/images/hero-aerial-768.avif 768w, /images/hero-aerial-1280.avif 1280w, /images/hero-aerial.avif 1920w" sizes="100vw"><source type="image/webp" srcset="/images/hero-aerial-768.webp 768w, /images/hero-aerial-1280.webp 1280w, /images/hero-aerial.webp 1920w" sizes="100vw"><img src="/images/hero-aerial.jpg" alt="LUMIÈRE Hanoi Seasons Garden — Phối cảnh tổng thể dự án" class="w-full h-full object-cover" width="1920" height="1080" loading="eager" fetchpriority="high"></picture>
         <!-- Top fade so the sticky header sits on a darker band -->
         <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-hsg-slate-dark/70 to-transparent"></div>
-        <!-- Bottom fade — opaque at the base, darkens early so the headline is always WCAG-AA on bright skies -->
-        <div class="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-hsg-slate-dark via-hsg-slate-dark/85 to-transparent"></div>
+        <!-- Overall darken on mobile; a left-to-right scrim on desktop so the form card on the right stays WCAG-AA on bright skies -->
+        <div class="absolute inset-0 bg-hsg-slate-dark/60 lg:bg-gradient-to-r lg:from-hsg-slate-dark/90 lg:via-hsg-slate-dark/70 lg:to-hsg-slate-dark/55"></div>
       </div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 w-full">
-        <div class="text-center text-ivory max-w-3xl mx-auto">
-          <p class="inline-block text-xs lg:text-sm font-semibold tracking-[0.35em] text-ivory bg-hsg-slate-dark/55 backdrop-blur-sm px-5 py-2 rounded-full mb-7 [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">PHÒNG KINH DOANH CHÍNH THỨC</p>
-          <img src="/images/logo-lumiere-hsg-white.png" width="3604" height="1769" alt="LUMIÈRE Hanoi Seasons Garden" class="mx-auto h-20 lg:h-28 w-auto mb-6 drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
-          <p class="font-sans text-base lg:text-xl text-ivory tracking-wide mb-10 [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]">Phân khu <span class="font-semibold text-sand">The Bloom</span> — Tòa L1 &amp; L2 · 233 Nguyễn Trãi, Hà Nội</p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#lien-he" class="inline-flex items-center px-10 py-4 bg-sand text-hsg-slate-dark text-xs font-semibold tracking-[0.18em] uppercase hover:bg-sand-dark transition-colors min-w-[220px] justify-center rounded-sm">Nhận bảng giá</a>
-            <a href="tel:0564928999" class="inline-flex items-center px-10 py-4 border border-sage/60 text-ivory text-xs font-semibold tracking-[0.18em] uppercase hover:bg-ivory/10 transition-colors min-w-[220px] justify-center rounded-sm">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-24 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <!-- Left: branding + value prop -->
+          <div class="text-left text-ivory max-w-xl">
+            <p class="inline-block text-xs lg:text-sm font-semibold tracking-[0.35em] text-ivory bg-hsg-slate-dark/55 backdrop-blur-sm px-5 py-2 rounded-full mb-7 [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">PHÒNG KINH DOANH CHÍNH THỨC</p>
+            <img src="/images/logo-lumiere-hsg-white.png" width="3604" height="1769" alt="LUMIÈRE Hanoi Seasons Garden" class="h-20 lg:h-28 w-auto mb-6 drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
+            <p class="font-sans text-base lg:text-xl text-ivory tracking-wide mb-8 [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]">Phân khu <span class="font-semibold text-sand">The Bloom</span> — Tòa L1 &amp; L2 · 233 Nguyễn Trãi, Hà Nội</p>
+            <a href="tel:0564928999" class="inline-flex items-center px-8 py-4 border border-sage/60 text-ivory text-xs font-semibold tracking-[0.18em] uppercase hover:bg-ivory/10 transition-colors justify-center rounded-sm">
               <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
               0564.928.999
             </a>
           </div>
+          <!-- Right: lead capture form -->
+          <form id="lead-form" class="lead-form w-full max-w-md mx-auto lg:ml-auto bg-hsg-slate-dark/70 backdrop-blur rounded-3xl p-6 lg:p-8 border border-sage/20 space-y-4 shadow-2xl" novalidate>
+            <div class="text-center mb-2">
+              <p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Đăng ký nhận thông tin</p>
+              <h2 class="font-display text-2xl lg:text-3xl text-ivory">Nhận bảng giá The Bloom</h2>
+            </div>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Do not fill" style="position:absolute;left:-9999px">
+            <div><label for="lf-name" class="block text-xs uppercase tracking-wider text-sage mb-2">Tên anh/chị *</label><input id="lf-name" name="name" type="text" required minlength="2" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Mr Lâm"></div>
+            <div><label for="lf-phone" class="block text-xs uppercase tracking-wider text-sage mb-2">Số điện thoại *</label><input id="lf-phone" name="phone" type="tel" required pattern="0[0-9]{9}" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="09xx xxx xxx"></div>
+            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-sand text-hsg-slate-dark text-xs font-semibold tracking-[0.18em] uppercase rounded-sm hover:bg-sand-dark transition-colors">Đăng ký nhận thông tin</button>
+            <p class="lf-status text-sm text-center hidden"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -654,14 +666,13 @@
             <div><p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Zalo</p><a href="https://zalo.me/0564928999" rel="noopener" class="text-lg text-ivory hover:text-sand transition-colors">zalo.me/0564928999</a></div>
             <div><p class="text-xs tracking-[0.3em] text-sand uppercase mb-2">Dự án</p><p class="text-base text-sage leading-relaxed">LUMIÈRE Hanoi Seasons Garden<br>233 Nguyễn Trãi, Thanh Xuân, Hà Nội</p></div>
           </div>
-          <form id="lead-form" class="lg:col-span-3 bg-hsg-slate-dark/60 backdrop-blur rounded-3xl p-6 lg:p-8 border border-sage/20 space-y-4" novalidate>
+          <form id="lead-form-2" class="lead-form lg:col-span-3 bg-hsg-slate-dark/60 backdrop-blur rounded-3xl p-6 lg:p-8 border border-sage/20 space-y-4" novalidate>
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Do not fill" style="position:absolute;left:-9999px">
-            <div><label for="lf-name" class="block text-xs uppercase tracking-wider text-sage mb-2">Tên anh/chị *</label><input id="lf-name" name="name" type="text" required minlength="2" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Mr Lâm"></div>
-            <div><label for="lf-phone" class="block text-xs uppercase tracking-wider text-sage mb-2">Số điện thoại *</label><input id="lf-phone" name="phone" type="tel" required pattern="0[0-9]{9}" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="09xx xxx xxx"></div>
-            <div><label for="lf-msg" class="block text-xs uppercase tracking-wider text-sage mb-2">Nội dung quan tâm</label><textarea id="lf-msg" name="message" rows="3" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Loại căn quan tâm, ngân sách dự kiến..."></textarea></div>
-            <label class="flex items-start gap-3 text-sm text-sage"><input type="checkbox" name="want_pricelist" value="1" checked class="mt-1 accent-sand"><span>Tôi muốn nhận bảng giá &amp; mặt bằng The Bloom qua email/Zalo.</span></label>
-            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-sand text-hsg-slate-dark text-xs font-semibold tracking-[0.18em] uppercase rounded-sm hover:bg-sand-dark transition-colors">Gửi đăng ký</button>
-            <p id="lf-status" class="text-sm text-center hidden"></p>
+            <div><label for="lf2-name" class="block text-xs uppercase tracking-wider text-sage mb-2">Tên anh/chị *</label><input id="lf2-name" name="name" type="text" required minlength="2" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Mr Lâm"></div>
+            <div><label for="lf2-phone" class="block text-xs uppercase tracking-wider text-sage mb-2">Số điện thoại *</label><input id="lf2-phone" name="phone" type="tel" required pattern="0[0-9]{9}" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="09xx xxx xxx"></div>
+            <div><label for="lf2-msg" class="block text-xs uppercase tracking-wider text-sage mb-2">Nội dung quan tâm</label><textarea id="lf2-msg" name="message" rows="3" class="w-full bg-hsg-slate-dark border border-sage/30 rounded-lg px-4 py-3 text-ivory placeholder-sage/40 focus:outline-none focus:border-sand" placeholder="Loại căn quan tâm, ngân sách dự kiến..."></textarea></div>
+            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-sand text-hsg-slate-dark text-xs font-semibold tracking-[0.18em] uppercase rounded-sm hover:bg-sand-dark transition-colors">Đăng ký nhận thông tin</button>
+            <p class="lf-status text-sm text-center hidden"></p>
           </form>
         </div>
       </div>
