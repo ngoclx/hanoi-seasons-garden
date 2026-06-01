@@ -153,8 +153,10 @@
 
   // Lead form — uses safe DOM, no innerHTML
   const PHONE_RE = /^0\d{9}$/;
-  document.querySelectorAll('form.lead-form').forEach((leadForm) => {
-    const status = leadForm.querySelector('.lf-status');
+  // Matches both the class-hook forms on the homepage (two instances) and the
+  // single id="lead-form" used on blog/faq/tower pages.
+  document.querySelectorAll('form.lead-form, form#lead-form').forEach((leadForm) => {
+    const status = leadForm.querySelector('.lf-status, #lf-status');
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       status.classList.remove('hidden', 'text-sand', 'text-red-300');
