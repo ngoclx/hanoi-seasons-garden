@@ -152,9 +152,125 @@
   }
 
   // Lead form — uses safe DOM, no innerHTML
+  // --- Lead-capture popup ---------------------------------------------------
+  // Injected on every page (main.js is loaded everywhere). Shows at most once
+  // per hour and never again once any lead form on any page is submitted.
+  const LEAD_DONE_KEY = 'hsg_lead_submitted';
+  const POPUP_SHOWN_KEY = 'hsg_popup_last_shown';
+  const POPUP_COOLDOWN_MS = 60 * 60 * 1000; // 1 hour
+  const POPUP_DELAY_MS = 3000;              // appear 3s after page load
+
+  const lsGet = (k) => { try { return window.localStorage.getItem(k); } catch (_) { return null; } };
+  const lsSet = (k, v) => { try { window.localStorage.setItem(k, v); } catch (_) { /* private mode */ } };
+
+  function buildLeadPopup() {
+    const root = document.createElement('div');
+    root.className = 'lead-popup hidden fixed inset-0 z-[70] bg-hsg-slate-dark/70 backdrop-blur-sm flex items-center justify-center p-4';
+    root.setAttribute('role', 'dialog');
+    root.setAttribute('aria-modal', 'true');
+    root.setAttribute('aria-labelledby', 'lead-popup-title');
+
+    const card = document.createElement('div');
+    card.className = 'relative bg-white rounded-3xl w-full max-w-lg p-6 lg:p-10 shadow-2xl';
+
+    const close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-lum-green text-white text-2xl leading-none hover:bg-lum-green-dark transition-colors';
+    close.setAttribute('aria-label', 'Đóng');
+    close.textContent = '×';
+
+    const eyebrow = document.createElement('p');
+    eyebrow.className = 'text-xs tracking-[0.3em] uppercase text-lum-green text-center mb-3';
+    eyebrow.textContent = 'Cập nhật mới nhất từ chủ đầu tư';
+
+    const title = document.createElement('h2');
+    title.id = 'lead-popup-title';
+    title.className = 'font-display text-2xl lg:text-3xl text-hsg-slate text-center mb-4';
+    title.textContent = 'LUMIÈRE Hanoi Seasons Garden';
+
+    const divider = document.createElement('div');
+    divider.className = 'w-14 h-px bg-sand mx-auto mb-6';
+
+    const panel = document.createElement('div');
+    panel.className = 'bg-ivory rounded-2xl p-5 lg:p-6';
+
+    const heading = document.createElement('h3');
+    heading.className = 'font-semibold text-center tracking-wide text-hsg-slate uppercase text-sm mb-2';
+    heading.textContent = 'Đăng ký nhận tài liệu & bảng giá';
+
+    const sub = document.createElement('p');
+    sub.className = 'text-sm text-hsg-slate/70 text-center italic mb-5';
+    sub.textContent = 'Quý khách vui lòng để lại thông tin, trọn bộ tài liệu chi tiết sẽ được gửi tới sau ít phút.';
+
+    const form = document.createElement('form');
+    form.className = 'lead-form space-y-3';
+    form.setAttribute('novalidate', '');
+
+    const honey = document.createElement('input');
+    honey.type = 'text'; honey.name = '_gotcha'; honey.tabIndex = -1; honey.autocomplete = 'off';
+    honey.setAttribute('aria-hidden', 'true'); honey.setAttribute('aria-label', 'Do not fill');
+    honey.style.cssText = 'position:absolute;left:-9999px';
+
+    const inputCls = 'w-full bg-white border border-warm-gray rounded-lg px-4 py-3 text-hsg-slate placeholder-hsg-slate/40 focus:outline-none focus:border-sand';
+    const nameInput = document.createElement('input');
+    nameInput.id = 'lp-name'; nameInput.name = 'name'; nameInput.type = 'text';
+    nameInput.required = true; nameInput.minLength = 2; nameInput.className = inputCls;
+    nameInput.placeholder = 'Họ tên';
+
+    const phoneInput = document.createElement('input');
+    phoneInput.id = 'lp-phone'; phoneInput.name = 'phone'; phoneInput.type = 'tel';
+    phoneInput.required = true; phoneInput.pattern = '0[0-9]{9}'; phoneInput.className = inputCls;
+    phoneInput.placeholder = 'Số điện thoại';
+
+    const source = document.createElement('input');
+    source.type = 'hidden'; source.name = 'source'; source.value = 'popup';
+
+    const submit = document.createElement('button');
+    submit.type = 'submit';
+    submit.className = 'w-full inline-flex items-center justify-center px-8 py-4 bg-sand text-hsg-slate-dark text-xs font-semibold tracking-[0.18em] uppercase rounded-sm hover:bg-sand-dark transition-colors';
+    submit.textContent = 'Đăng ký tư vấn';
+
+    const status = document.createElement('p');
+    status.className = 'lf-status text-sm text-center hidden';
+
+    const nameWrap = document.createElement('div'); nameWrap.appendChild(nameInput);
+    const phoneWrap = document.createElement('div'); phoneWrap.appendChild(phoneInput);
+    form.append(honey, nameWrap, phoneWrap, source, submit, status);
+    panel.append(heading, sub, form);
+    card.append(close, eyebrow, title, divider, panel);
+    root.appendChild(card);
+
+    const hide = () => root.classList.add('hidden');
+    close.addEventListener('click', hide);
+    root.addEventListener('click', (e) => { if (e.target === root) hide(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !root.classList.contains('hidden')) hide();
+    });
+
+    return { root, hide, nameInput };
+  }
+
+  const leadPopup = buildLeadPopup();
+  document.body.appendChild(leadPopup.root);
+
+  function showLeadPopup() {
+    if (lsGet(LEAD_DONE_KEY) === '1') return;
+    leadPopup.root.classList.remove('hidden');
+    lsSet(POPUP_SHOWN_KEY, String(Date.now()));
+    try { leadPopup.nameInput.focus(); } catch (_) { /* noop */ }
+  }
+
+  // Schedule one appearance if not suppressed and outside the 1h cooldown.
+  if (lsGet(LEAD_DONE_KEY) !== '1') {
+    const last = parseInt(lsGet(POPUP_SHOWN_KEY) || '0', 10);
+    if (Date.now() - last >= POPUP_COOLDOWN_MS) {
+      window.setTimeout(showLeadPopup, POPUP_DELAY_MS);
+    }
+  }
+
   const PHONE_RE = /^0\d{9}$/;
-  // Matches both the class-hook forms on the homepage (two instances) and the
-  // single id="lead-form" used on blog/faq/tower pages.
+  // Matches both the class-hook forms on the homepage (two instances), the
+  // injected popup form, and the single id="lead-form" on blog/faq/tower pages.
   document.querySelectorAll('form.lead-form, form#lead-form').forEach((leadForm) => {
     const status = leadForm.querySelector('.lf-status, #lf-status');
     leadForm.addEventListener('submit', async (e) => {
@@ -192,6 +308,9 @@
         status.textContent = 'Cảm ơn — Phòng Kinh Doanh sẽ liên hệ trong thời gian sớm nhất.';
         status.classList.remove('hidden');
         leadForm.reset();
+        // Any successful submission suppresses the popup permanently.
+        lsSet(LEAD_DONE_KEY, '1');
+        leadPopup.hide();
       } catch (err) {
         status.classList.add('text-red-300');
         status.textContent = 'Có lỗi khi gửi. Vui lòng gọi 0564.928.999.';
