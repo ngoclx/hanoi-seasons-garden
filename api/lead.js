@@ -149,8 +149,8 @@ async function sendEmail({ resendKey, emailTo, name, phone, message, wantPriceli
       </tr>`).join('')}
     </table>
     <p style="margin:18px 0 0;font-size:14px;">
-      📲 Zalo: <a href="https://zalo.me/${phone}" style="color:#455F39;">zalo.me/${phone}</a><br>
-      ☎️ Gọi: <a href="tel:${phone}" style="color:#455F39;">${phone}</a>
+      📲 Zalo: <a href="https://zalo.me/${encodeURIComponent(phone)}" style="color:#455F39;">zalo.me/${escHtml(phone)}</a><br>
+      ☎️ Gọi: <a href="tel:${encodeURIComponent(phone)}" style="color:#455F39;">${escHtml(phone)}</a>
     </p>
     <p style="color:#9aa093;font-size:12px;margin-top:22px;">Gửi tự động từ form đăng ký pkdhanoiseasonsgarden.com</p>
   </div>
