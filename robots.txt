@@ -1,4 +1,54 @@
+# robots.txt — PKD Hanoi Seasons Garden
+# Standard crawlers
 User-agent: *
 Allow: /
+
+# AI answer engines & LLM crawlers — explicitly welcomed (GEO)
+# OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+# Google (Gemini / AI Overviews training)
+User-agent: Google-Extended
+Allow: /
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+# Apple, Amazon, Meta, others
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalFetcher
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+
+# Machine-readable site summary for LLMs
+# See: https://www.pkdhanoiseasonsgarden.com/llms.txt
 
 Sitemap: https://www.pkdhanoiseasonsgarden.com/sitemap.xml
