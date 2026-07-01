@@ -106,15 +106,20 @@ Posts are static HTML with metadata in `blog/posts.json`.
 
 ## Lead form pipeline
 
-The lead form (`#lead-form` in `index.html`) posts URL-encoded data to `/api/lead` (a Vercel serverless function in `api/lead.js`). The function validates the payload server-side, then forwards a formatted message to Telegram bot `@pkdbdshn_bot`, which pings the configured chat (currently Xuan Ngoc Ly's private chat, ID `6200358915`). Message body includes a `zalo.me/<phone>` deep-link so one tap from the notification opens Zalo chat with the lead.
+The lead form (`#lead-form` in `index.html`) posts URL-encoded data to `/api/lead` (a Vercel serverless function in `api/lead.js`). The function validates the payload server-side, then fans the lead out to two channels **in parallel** (`Promise.allSettled`): (1) Telegram bot `@pkdbdshn_bot`, which pings the configured chat (currently Xuan Ngoc Ly's private chat, ID `6200358915`); and (2) a Resend email to the sales inbox. Both the Telegram message and the email include a `zalo.me/<phone>` deep-link so one tap opens Zalo chat with the lead.
+
+**Success semantics:** the request returns `200` if **at least one** channel delivers (so a Telegram hiccup never loses a lead), `502` only if every configured channel fails, and `500` only if no channel is configured. Each channel is attempted only when its env vars are present — so Telegram-only, email-only, and both are all valid configurations.
 
 Required Vercel env vars (set in Project → Settings → Environment Variables, all three environments):
 - `TELEGRAM_BOT_TOKEN` — the bot HTTP API token from @BotFather
 - `TELEGRAM_CHAT_ID` — numeric chat ID (private or group)
+- `RESEND_API_KEY` — Resend API key (`re_...`) — enables the email channel
+- `LEAD_EMAIL_TO` — recipient(s), comma-separated — enables the email channel
+- `LEAD_EMAIL_FROM` — optional; verified sender e.g. `LUMIÈRE HSG <lead@pkdhanoiseasonsgarden.com>`. Defaults to `onboarding@resend.dev` (testing only — verify a domain in Resend for production, otherwise delivery is restricted to the account owner).
 
-To route alerts to a group chat instead: create the group, add `@pkdbdshn_bot`, send any message in the group, then `curl https://api.telegram.org/bot<TOKEN>/getUpdates` and use the negative `chat.id` returned. Update the env var, redeploy.
+To route Telegram alerts to a group chat instead: create the group, add `@pkdbdshn_bot`, send any message in the group, then `curl https://api.telegram.org/bot<TOKEN>/getUpdates` and use the negative `chat.id` returned. Update the env var, redeploy.
 
-Server-side validation mirrors the client: name ≥ 2 chars, phone matches `/^0\d{9}$/`. Honeypot `_gotcha` silently returns 200. Function logs to Vercel's runtime logs on Telegram errors.
+Server-side validation mirrors the client: name ≥ 2 chars, phone matches `/^0\d{9}$/`. Honeypot `_gotcha` silently returns 200. Function logs each failed channel to Vercel's runtime logs.
 
 ## Image pipeline
 
@@ -147,7 +152,7 @@ PDF gated downloads (`docs/floorplans-l*-the-bloom.pdf`) committed at ~10–15MB
 
 ## Pre-launch checklist
 
-- [x] Lead form posts to `/api/lead` (Vercel function → Telegram bot `@pkdbdshn_bot`)
+- [x] Lead form posts to `/api/lead` (Vercel function → Telegram bot `@pkdbdshn_bot` + Resend email, in parallel)
 - [ ] Confirm bảo lãnh ngân hàng list with Masterise → update §Pháp lý of `index.html` and `llms.txt`
 - [ ] Confirm Bảng giá table — adjust 11-row table in `index.html#bang-gia` if Masterise publishes corrected size ranges or prices
 - [ ] DNS: point `pkdhanoiseasonsgarden.com` apex + `www` to Vercel
