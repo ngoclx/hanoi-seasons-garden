@@ -106,7 +106,7 @@ Posts are static HTML with metadata in `blog/posts.json`.
 
 ## Lead form pipeline
 
-The lead form (`#lead-form` in `index.html`) posts URL-encoded data to `/api/lead` (a Vercel serverless function in `api/lead.js`). The function validates the payload server-side, then fans the lead out to two channels **in parallel** (`Promise.allSettled`): (1) Telegram bot `@pkdbdshn_bot`, which pings the configured chat (currently Xuan Ngoc Ly's private chat, ID `6200358915`); and (2) a Resend email to the sales inbox. Both the Telegram message and the email include a `zalo.me/<phone>` deep-link so one tap opens Zalo chat with the lead.
+The lead form (`#lead-form` in `index.html`) posts URL-encoded data to `/api/lead` (a Vercel serverless function in `api/lead.js`). The function validates the payload server-side, then fans the lead out to two channels **in parallel** (`Promise.allSettled`): (1) Telegram bot `@pkdbdshn_bot`, which pings the configured chat (the shared PKD group chat **"BĐS Đức"**, ID `-5133022071` — the same group is also used by the vingghl / Vinhomes Global Gate Hạ Long site, so lead messages are stamped with the project name to distinguish them); and (2) a Resend email to the sales inbox. Both the Telegram message and the email include a `zalo.me/<phone>` deep-link so one tap opens Zalo chat with the lead.
 
 **Success semantics:** the request returns `200` if **at least one** channel delivers (so a Telegram hiccup never loses a lead), `502` only if every configured channel fails, and `500` only if no channel is configured. Each channel is attempted only when its env vars are present — so Telegram-only, email-only, and both are all valid configurations.
 
